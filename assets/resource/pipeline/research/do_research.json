@@ -9,12 +9,7 @@
     "博物研学.EnsureInResearchField.HomePage": {
         "recognition": "TemplateMatch",
         "template": "Common/ResearchEntry.png",
-        "roi": [
-            1134,
-            341,
-            70,
-            59
-        ],
+        "roi": [1134,341,70,59],
         "action": "Click",
         "post_delay": 2000,
         "next": "博物研学.EnsureInResearchField.CheckAndPass"
@@ -22,12 +17,7 @@
     "博物研学.EnsureInResearchField.CheckAndPass": {
         "recognition": "TemplateMatch",
         "template": "Research/Field.png",
-        "roi": [
-            75,
-            22,
-            108,
-            25
-        ]
+        "roi": [75,22,108,25]
     },
     "博物研学.开始博物研学": {
         "next": [
@@ -40,12 +30,7 @@
         "action": {
             "type":"Click",
             "param": {
-                "target": [
-                    1084,
-                    334,
-                    169,
-                    66
-                ]
+                "target": [1084,334,169,66]
             }
         },
         "next": "博物研学.开始博物研学.关闭周常奖励"
@@ -54,12 +39,7 @@
         "action": {
             "type":"Click",
             "param": {
-                "target": [
-                    670,
-                    592,
-                    112,
-                    76
-                ]
+                "target": [670,592,112,76]
             }
         },
         "next": "博物研学.开始博物研学.选择金银纪行"
@@ -67,12 +47,7 @@
     "博物研学.开始博物研学.Continue": {
         "recognition": "TemplateMatch",
         "template": "Research/Continue.png",
-        "roi": [
-            980,
-            644,
-            161,
-            38
-        ],
+        "roi": [980,644,161,38],
         "action": "Click"
     },
     "博物研学.开始博物研学.选择金银纪行": {
@@ -88,39 +63,29 @@
                 ]
             }
         },
-        "next": "博物研学.开始.点击进入主题"
+        "next": "博物研学.开始博物研学.点击进入主题"
     },
-    "博物研学.开始.点击进入主题": {
-        "pre_wait_freezes": 200,
+    "博物研学.开始博物研学.点击进入主题": {
+        "pre_wait_freezes": 400,  //停顿较长时间
         "action": {
             "type":"Click",
             "param": {
-                "target": [
-                    930,
-                    635,
-                    255,
-                    54
-                ]
+                "target": [930,635,255,54]
             }
         },
-        "next": "博物研学.开始.点击研学启程"
+        "next": "博物研学.开始博物研学.点击研学启程"
     },
-    "博物研学.开始.点击研学启程": {
-        "pre_wait_freezes": 200,
+    "博物研学.开始博物研学.点击研学启程": {
+        "pre_wait_freezes": 400,  //停顿较长时间
         "action": {
             "type":"Click",
             "param": {
-                "target": [
-                    930,
-                    635,
-                    255,
-                    54
-                ]
+                "target": [984,634,179,46]
             }
         },
-        "next": "博物研学.开始.点击噩魇"
+        "next": "博物研学.开始博物研学.点击噩魇"
     },
-    "博物研学.开始.点击噩魇": {
+    "博物研学.开始博物研学.点击噩魇": {
         "pre_wait_freezes": 200,
         "action": {
             "type":"Click",
@@ -128,9 +93,9 @@
                 "target": [532,218,210,304]
             }
         },
-        "next": "博物研学.开始.选择难度普通"
+        "next": "博物研学.开始博物研学.选择难度普通"
     },
-    "博物研学.开始.选择难度普通": {
+    "博物研学.开始博物研学.选择难度普通": {
         "pre_wait_freezes": 200,
         "action": {
             "type":"Click",
@@ -138,9 +103,9 @@
                 "target": [247,266,161,43]
             }
         },
-        "next": "博物研学.开始.选择初始角色"
+        "next": "博物研学.开始博物研学.点击选择初始角色"
     },
-    "博物研学.开始.选择初始角色": {
+    "博物研学.开始博物研学.点击选择初始角色": {
         "pre_wait_freezes": 200,
         "action": {
             "type":"Click",
@@ -148,19 +113,19 @@
                 "target": [851,418,60,69]
             }
         },
-        "next": "博物研学.开始.选择筛选"
+        "next": "博物研学.开始博物研学.选择筛选"
     },
-    "博物研学.开始.选择筛选": {
-        "pre_wait_freezes": 200,
+    "博物研学.开始博物研学.选择筛选": {
+        "pre_wait_freezes": 600,  //停顿较长时间
         "action": {
             "type":"Click",
             "param": {
-                "target": [1209,13,34,33]
+                "target": [1204,12,37,36]
             }
         },
-        "next": "博物研学.开始.选择构术"
+        "next": "博物研学.开始博物研学.选择构术"
     },
-    "博物研学.开始.选择构术": {
+    "博物研学.开始博物研学.选择构术": {
         "pre_wait_freezes": 200,
         "action": {
             "type":"Click",
@@ -168,9 +133,9 @@
                 "target": [815,220,49,27]
             }
         },
-        "next": "博物研学.开始.确定_1"
+        "next": "博物研学.开始博物研学.确定_1"
     },
-    "博物研学.开始.确定_1": {
+    "博物研学.开始博物研学.确定_1": {
         "pre_wait_freezes": 200,
         "action": {
             "type":"Click",
@@ -178,66 +143,95 @@
                 "target": [791,528,110,42]
             }
         },
-        "next": "博物研学.开始.向右滑动一段"
+        "post_wait_freezes": 200,
+        "next": "博物研学.开始博物研学.选择初始角色加入编队"
     },
-    "博物研学.开始.向右滑动一段": {
-        "pre_wait_freezes": 200,
+    "博物研学.开始博物研学.选择初始角色加入编队": {
+        "next": [
+            "博物研学.开始博物研学.选择铜壶滴漏",
+            "博物研学.开始博物研学.选择莫高窟记",
+            "博物研学.开始博物研学.选择断臂维纳斯",
+            "博物研学.开始博物研学.选择秦公镈",
+            "博物研学.开始博物研学.确定初始角色"
+        ],
+        "interrupt": "博物研学.开始博物研学.向右滑动一段" //如果找不到对应的器者就向右滑动
+    },
+    "博物研学.开始博物研学.向右滑动一段": {
+        "post_wait_freezes": 200,
         "action": {
             "type":"Swipe",
             "param": {
-                "begin": [500,100,10,10],
-                "end": [100,100,10,10]
+                "begin": [990,360,0,0],  //设置正好滑动一页
+                "end": [600,360,0,0],
+                "duration": 500,
             }
-        },
-        "next": "博物研学.开始.选择铜壶滴漏"
+        }
     },
-    "博物研学.开始.选择铜壶滴漏": {
-        "pre_wait_freezes": 200,
-        "recognition": "OCR",
-        "expected": "铜壶滴漏",
+    "博物研学.开始博物研学.选择铜壶滴漏": {
+        "recognition": {
+            "type":"TemplateMatch",
+            "param":{
+                "template": "Artifacter/铜壶滴漏.png",
+                "roi" : [474,55,725,611]}
+        },
         "action": {
             "type":"Click"
         },
-        "next": "博物研学.开始.选择莫高窟记"
+        "next": "博物研学.开始博物研学.选择初始角色加入编队"
     },
-    "博物研学.开始.选择莫高窟记": {
-        "pre_wait_freezes": 200,
-        "recognition": "OCR",
-        "expected": "莫高窟记",
+    "博物研学.开始博物研学.选择莫高窟记": {
+        "recognition": {
+            "type":"TemplateMatch",
+            "param":{
+                "template": "Artifacter/莫高窟记.png",
+                "roi" : [474,55,725,611]}
+        },
         "action": {
             "type":"Click"
         },
-        "next": "博物研学.开始.选择断臂维纳斯"
+        "next": "博物研学.开始博物研学.选择初始角色加入编队"
     },
-    "博物研学.开始.选择断臂维纳斯": {
-        "pre_wait_freezes": 200,
-        "recognition": "OCR",
-        "expected": "断臂维纳斯",
+    "博物研学.开始博物研学.选择断臂维纳斯": {
+        "recognition": {
+            "type":"TemplateMatch",
+            "param":{
+                "template": "Artifacter/断臂维纳斯.png",
+                "roi" : [474,55,725,611]}
+        },
         "action": {
             "type":"Click"
         },
-        "next": "博物研学.开始.选择秦公镈"
+        "next": "博物研学.开始博物研学.选择初始角色加入编队"
     },
-    "博物研学.开始.选择秦公镈": {
-        "pre_wait_freezes": 200,
-        "recognition": "OCR",
-        "expected": "秦公镈",
+    "博物研学.开始博物研学.选择秦公镈": {
+        "recognition": {
+            "type":"TemplateMatch",
+            "param":{
+                "template": "Artifacter/秦公镈.png",
+                "roi" : [474,55,725,611]}
+        },
         "action": {
             "type":"Click"
         },
-        "next": "博物研学.开始.确定初始角色"
+        "next": "博物研学.开始博物研学.选择初始角色加入编队"
     },
-    "博物研学.开始.确定初始角色": {
-        "pre_wait_freezes": 200,
+    "博物研学.开始博物研学.确定初始角色": {
+        "recognition": {
+            "type":"TemplateMatch",
+            "param":{
+                "template": "Artifacter/4人选完.png",
+                "roi" : [474,55,725,611],
+                "green_mask": true}
+        },
         "action": {
             "type":"Click",
             "param": {
                 "target": [1143,671,92,34]
             }
         },
-        "next": "博物研学.开始.选择辅助效果方向"
+        "next": "博物研学.开始博物研学.选择辅助效果方向"
     },
-    "博物研学.开始.选择辅助效果方向": {
+    "博物研学.开始博物研学.选择辅助效果方向": {
         "pre_wait_freezes": 200,
         "action": {
             "type":"Click",
@@ -245,9 +239,9 @@
                 "target": [886,549,261,42]
             }
         },
-        "next": "博物研学.开始.进入研学（使用默认“破军”奇策）"
+        "next": "博物研学.开始博物研学.进入研学（使用默认“破军”奇策）"
     },
-    "博物研学.开始.进入研学（使用默认“破军”奇策）": {
+    "博物研学.开始博物研学.进入研学（使用默认“破军”奇策）": {
         "pre_wait_freezes": 200,
         "action": {
             "type":"Click",
@@ -255,17 +249,228 @@
                 "target": [886,549,261,42]
             }
         },
-        "next": "博物研学.开始.第一步往上走"
+        "next": "博物研学.局内.第一步往上走"
     },
-    "博物研学.开始.第一步往上走": {
-        "pre_wait_freezes": 200,
+    "博物研学.局内.第一步往上走": {
+        "pre_wait_freezes": 800,
         "action": {
             "type":"Click",
             "param": {
                 "target": [554,267,49,52]
             }
         },
-        "next": "博物研学.开始.进入研学（使用默认“破军”奇策）"
+        "next": "博物研学.局内.第一步事件确认"
+    },
+    "博物研学.局内.第一步事件确认": {
+        "pre_wait_freezes": 400,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [1005,499,77,30]
+            }
+        },
+        "next": "博物研学.局内.第一步奇策确认"
+    },
+    "博物研学.局内.第一步奇策确认": {
+        "pre_wait_freezes": 400,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [841,619,104,43]
+            }
+        },
+        "next": "博物研学.局内.第二步往上走"
+    },
+    "博物研学.局内.第二步往上走": {
+        "pre_wait_freezes": 400,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [821,258,40,41]
+            }
+        },
+        "next": "博物研学.局内.第二步事件确认"
+    },
+    "博物研学.局内.第二步事件确认": {
+        "pre_wait_freezes": 400,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [995,494,90,37]
+            }
+        },
+        "next": "博物研学.局内.第二步奇策确认"
+    },
+    "博物研学.局内.第二步奇策确认": {
+        "pre_wait_freezes": 400,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [841,619,104,43]
+            }
+        },
+        "next": "博物研学.局内.第三步往上走"
+    },
+    "博物研学.局内.第三步往上走": {
+        "pre_wait_freezes": 400,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [1034,310,45,40]
+            }
+        },
+        "next": "博物研学.局内.第三步战斗确认"
+    },
+    "博物研学.局内.第三步战斗确认": {
+        "pre_wait_freezes": 400,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [1007,491,75,45]
+            }
+        },
+        "next": "博物研学.局内.第三步编队界面点击开始"
+    },
+    "博物研学.局内.第三步编队界面点击开始": {
+        "pre_wait_freezes": 600,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [1066,634,90,35]
+            }
+        },
+        "post_wait_freezes": 2000,
+        "next": "博物研学.局内.第三步开启自动战斗"
+    },
+    "博物研学.局内.第三步开启自动战斗": {
+        "recognition": {
+            "type":"TemplateMatch",
+            "param":{
+                "template": "Combat/MaskedAutoFightDisabled.png",
+                "roi" : [1184,113,95,96],
+                "green_mask": true}
+        },
+        "action": {
+            "type":"Click"
+        },
+        "next": "博物研学.局内.第三步点击开始战斗"
+    },
+    "博物研学.局内.第三步点击开始战斗": {
+        "pre_wait_freezes": 600,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [1067,655,185,49]
+            }
+        },
+        "next": "博物研学.局内.第三步战斗结算点击确认"
+    },
+    "博物研学.局内.第三步战斗结算点击确认": {
+        "pre_wait_freezes": 2000,
+        "recognition": {
+            "type":"OCR",
+            "param":{
+                "expected": "确定",
+                "roi" : [934,631,81,46]
+            }
+        },
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [934,631,81,46]
+            }
+        },
+        "next": [
+          "博物研学.局内.第三步战斗后选择破军奇策",
+          "博物研学.局内.第三步战斗后选择随机奇策"
+        ]
+    },
+    "博物研学.局内.第三步战斗后选择破军奇策": {
+        "pre_wait_freezes": 1000,
+        "recognition": {
+            "type":"TemplateMatch",
+            "param":{
+                "template": "Research/Buff/破军奇策图标.png",
+                "roi" : [264,173,754,142]
+            }
+        },
+        "action": {
+            "type":"Click"
+        },
+        "next": "博物研学.局内.第三步确认奇策"
+    },
+    "博物研学.局内.第三步战斗后选择随机奇策": {
+        "action": {
+            "type":"Click",
+            "param": {
+              "target": [277,187,116,118]
+            }
+        },
+        "next": "博物研学.局内.第三步确认奇策"
+    },
+    "博物研学.局内.第三步确认奇策": {
+        "action": {
+            "type":"Click",
+            "param": {
+              "target": [850,621,84,39]
+            }
+        },
+        "next": "博物研学.局内.第三步再次确认"
+    },
+    "博物研学.局内.第三步再次确认": {
+        "action": {
+            "type":"Click",
+            "param": {
+              "target": [855,621,78,43]
+            }
+        },
+        "next": "博物研学.局内.第四步向右滑动一段"
+    },
+    "博物研学.局内.第四步向右滑动一段": {
+        "post_wait_freezes": 1000,
+        "action": {
+            "type":"Swipe",
+            "param": {
+                "begin": [1080,360,0,0],
+                "end": [100,360,0,0],
+                "duration": 700,
+                "end_hold": 1500  //结尾摁住，增强稳定性
+            }
+        }
+    },
+    "博物研学.局内.第四步往中走": {
+        "post_wait_freezes": 1000,
+        //由于滑动不稳定？不得已改用这个？
+        "recognition": {
+            "type":"TemplateMatch",
+            "param":{
+                "template": "Research/Buff/目标驻足小憩.png",
+                "roi" : [419,314,325,199]
+            }
+        },
+        "action": {
+            "type":"Click"
+        }
+    },
+    "博物研学.局内.第四步事件确认": {
+        "pre_wait_freezes": 400,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [1005,499,77,30]
+            }
+        },
+        "next": "博物研学.局内.第一步奇策确认"
+    },
+    "博物研学.局内.第四步奇策确认": {
+        "pre_wait_freezes": 400,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [841,619,104,43]
+            }
+        },
+        "next": "博物研学.局内.第二步往上走"
     },
     "博物研学.SelectMapOrPass": {
         "next": [
