@@ -1,11 +1,11 @@
 {
     "vitality": {
         "next": [
-            "entry_dispath_six",
+            "entry_dispatch_six",
             "vitality_one"
         ]
     },
-    "entry_dispath_six": {
+    "entry_dispatch_six": {
         "recognition": "TemplateMatch",
         "template": "Company/d_company.png",
         "action": "Click",

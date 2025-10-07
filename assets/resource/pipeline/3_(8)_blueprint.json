@@ -1,12 +1,12 @@
 {
     "blueprint-all": {
         "next": [
-            "entry_dispath_eight",
+            "entry_dispatch_eight",
             "blueprint-tearoom",
             "blueprint-one"
         ]
     },
-    "entry_dispath_eight": {
+    "entry_dispatch_eight": {
         "recognition": "TemplateMatch",
         "template": "Company/d_company.png",
         "action": "Click",

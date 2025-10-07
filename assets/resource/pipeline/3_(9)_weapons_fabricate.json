@@ -1,12 +1,12 @@
 {
     "weapons-fabricate": {
         "next": [
-            "entry_dispath_nine",
+            "entry_dispatch_nine",
             "weapons-fabricate-job",
             "senior-orders"
         ]
     },
-    "entry_dispath_nine": {
+    "entry_dispatch_nine": {
         "recognition": "TemplateMatch",
         "template": "Company/d_company.png",
         "action": "Click",
@@ -14,7 +14,7 @@
         "next": [
             "weapons-fabricate-job",
             "senior-orders",
-            "entry_dispath_nine"
+            "entry_dispatch_nine"
         ]
     },
     "weapons-fabricate-job": {

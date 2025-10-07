@@ -1,22 +1,22 @@
 {
     "entry_resources": {
         "next": [
-            "entry_dispath_one",
-            "dispath_resources",
+            "entry_dispatch_one",
+            "dispatch_resources",
             "entry_two"
         ]
     },
-    "entry_dispath_one": {
+    "entry_dispatch_one": {
         "recognition": "TemplateMatch",
         "template": "Company/d_company.png",
         "action": "Click",
         "post_wait_freezes": 1000,
         "next": [
-            "dispath_resources",
+            "dispatch_resources",
             "entry_two"
         ]
     },
-    "dispath_resources": {
+    "dispatch_resources": {
         "recognition": "TemplateMatch",
         "template": "Company/c_resources.png",
         "roi": [
@@ -28,12 +28,12 @@
         "action": "Click",
         "post_delay": 2500,
         "next": [
-            "no_dispath_resources",
+            "no_dispatch_resources",
             "click_space",
             "entry_two"
         ]
     },
-    "no_dispath_resources": {
+    "no_dispatch_resources": {
         "recognition": "OCR",
         "expected": "暂时没有",
         "action": "DoNothing",
@@ -147,7 +147,7 @@
     },
     "entry_weapons": {
         "next": [
-            "entry_dispath_one",
+            "entry_dispatch_one",
             "weapons"
         ]
     },

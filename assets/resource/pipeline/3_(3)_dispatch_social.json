@@ -1,7 +1,7 @@
 {
-    "dispath_company_collect": {
+    "dispatch_company_collect": {
         "next": [
-            "entry_dispath_three",
+            "entry_dispatch_three",
             "dispatch_social_one",
             "dispatch_social_two",
             "dispatch_social_three",
@@ -9,7 +9,7 @@
             "dc_back"
         ]
     },
-    "entry_dispath_three": {
+    "entry_dispatch_three": {
         "recognition": "TemplateMatch",
         "template": "Company/d_company.png",
         "action": "Click",

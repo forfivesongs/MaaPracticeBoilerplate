@@ -1,8 +1,8 @@
 {
     "entry_one": {
         "next": [
-            "entry_dispath_one",
-            "dispath_resources",
+            "entry_dispatch_one",
+            "dispatch_resources",
             "collect_induction",
             "donshe",
             "weapons"
@@ -12,7 +12,7 @@
         "next": [
             "entry_one",
             "entry_two",
-            "dispath_company_collect",
+            "dispatch_company_collect",
             "fabricate",
             "tea",
             "vitality"

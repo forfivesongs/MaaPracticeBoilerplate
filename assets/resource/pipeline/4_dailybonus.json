@@ -1,60 +1,68 @@
 {
-    "business_kiosk": {
+    "商亭每日补给": {
         "next": [
-            "shangting",
-            "libao",
-            "richang",
-            "donggu",
+            "点击商亭",
+            "点击礼包",
+            "点击循时补给",
+            "点击免费",
             "Quit"
         ]
     },
-    "shangting": {
+    "点击商亭": {
         "recognition": "OCR",
         "expected": "商亭",
         "post_delay": 2000,
         "action": "Click",
         "next": [
-            "libao"
+            "点击礼包"
         ]
     },
-    "libao": {
+    "点击礼包": {
         "recognition": "OCR",
         "expected": "礼包",
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "richang"
+            "点击循时补给"
         ]
     },
-    "richang": {
+    "点击循时补给": {
         "recognition": "OCR",
-        "expected": "日常",
+        "expected": "循时补给",
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "donggu"
+            "点击免费"
         ]
     },
-    "donggu": {
+    "点击免费": {
         "recognition": "OCR",
         "expected": "免费",
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "goumai",
+            "点击购买",
             "Quit"
         ]
     },
-    "goumai": {
-        "recognition": "OCR",
-        "expected": "购买",
-        "action": "Click",
+    "点击购买": {
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [
+                    753,
+                    511,
+                    122,
+                    47
+                ]
+            }
+        },
         "post_delay": 2000,
         "next": [
-            "obtain1"
+            "确认"
         ]
     },
-    "obtain1": {
+    "确认": {
         "recognition": "OCR",
         "expected": "获得物资",
         "action": "Click",

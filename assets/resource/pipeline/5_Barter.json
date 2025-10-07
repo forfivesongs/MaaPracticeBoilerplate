@@ -1,101 +1,52 @@
 {
-    "Barter_random": {
-        "next": [
-            "Barter",
-            "random_one",
-            "random_tow",
-            "random_three",
-            "random_four",
-            "Quit"
-        ]
-    },
-    "Barter": {
+    "进入易物所": {
         "recognition": "OCR",
         "expected": "易物所",
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "random_one",
-            "random_tow",
-            "random_three",
-            "random_four",
+            "尝试购买",
             "Quit"
         ]
     },
-    "random_one": {
-        "recognition": "TemplateMatch",
-        "template": "Shop/01.png",
-        "roi": [
-            295,
-            328,
-            53,
-            40
-        ],
+    "尝试购买": {
+      "next": [
+            "尝试购买1%折扣物品",
+            "尝试购买征集信",
+            "Quit"  //前两项都买完了就退出
+      ]
+    },
+    "尝试购买1%折扣物品": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "Shop/1percent.png",
+                "threshold": 0.9  //调高阈值以免误购买
+            }
+        },
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "max",
+            "点击购买_易物所",
             "Quit"
         ]
     },
-    "random_tow": {
-        "recognition": "TemplateMatch",
-        "template": "Shop/01.png",
-        "roi": [
-            523,
-            328,
-            51,
-            42
-        ],
+    "尝试购买征集信": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "Shop/征集信.png",
+                "threshold": 0.9  //调高阈值以免误购买
+            }
+        },
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "max",
+            "点击购买_易物所",
             "Quit"
         ]
     },
-    "random_three": {
-        "recognition": "TemplateMatch",
-        "template": "Shop/01.png",
-        "roi": [
-            756,
-            328,
-            46,
-            42
-        ],
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "max",
-            "Quit"
-        ]
-    },
-    "random_four": {
-        "recognition": "TemplateMatch",
-        "template": "Shop/01.png",
-        "roi": [
-            981,
-            328,
-            62,
-            41
-        ],
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "max",
-            "Quit"
-        ]
-    },
-    "max": {
-        "recognition": "OCR",
-        "expected": "最大",
-        "action": "Click",
-        "next": [
-            "purchase",
-            "Quit"
-        ]
-    },
-    "purchase": {
+    "点击购买_易物所": {
         "recognition": "TemplateMatch",
         "template": "Shop/02.png",
         "roi": [
@@ -107,12 +58,12 @@
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "no_money",
-            "obtain",
+            "没有足够的冬谷币",
+            "确认_易物所",
             "Quit"
         ]
     },
-    "no_money": {
+    "没有足够的冬谷币": {
         "recognition": "OCR",
         "expected": "没有足够",
         "action": "Click",
@@ -127,16 +78,13 @@
             "Quit"
         ]
     },
-    "obtain": {
+    "确认_易物所": {
         "recognition": "OCR",
         "expected": "获得物资",
         "action": "Click",
-        "pre_wait_freezes": 2000,
+        "pre_wait_freezes": 1000,
         "next": [
-            "random_one",
-            "random_tow",
-            "random_three",
-            "random_four",
+            "尝试购买",
             "Quit"
         ]
     }

@@ -1,13 +1,13 @@
 {
     "combine-all": {
         "next": [
-            "entry_dispath_seven",
+            "entry_dispatch_seven",
             "tearoom-combine",
             "combine-one",
             "combine-game"
         ]
     },
-    "entry_dispath_seven": {
+    "entry_dispatch_seven": {
         "recognition": "TemplateMatch",
         "template": "Company/d_company.png",
         "action": "Click",

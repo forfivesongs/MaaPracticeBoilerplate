@@ -1,18 +1,18 @@
 {
     "entry_two": {
         "next": [
-            "entry_dispath_two",
+            "entry_dispatch_two",
             "vending_machine",
             "vending_machine_reward"
         ]
     },
-    "entry_dispath_two": {
+    "entry_dispatch_two": {
         "recognition": "TemplateMatch",
         "template": "Company/d_company.png",
         "action": "Click",
         "post_wait_freezes": 2000,
         "next": [
-            "entry_dispath_two",
+            "entry_dispatch_two",
             "vending_machine",
             "vending_machine_reward"
         ]

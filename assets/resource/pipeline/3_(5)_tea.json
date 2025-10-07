@@ -1,13 +1,13 @@
 {
     "tea": {
         "next": [
-            "entry_dispath_five",
+            "entry_dispatch_five",
             "tearoom",
             "tea_two",
             "Instrument"
         ]
     },
-    "entry_dispath_five": {
+    "entry_dispatch_five": {
         "recognition": "TemplateMatch",
         "template": "Company/d_company.png",
         "action": "Click",
@@ -16,7 +16,7 @@
             "tearoom",
             "tea_two",
             "Instrument",
-            "entry_dispath_five"
+            "entry_dispatch_five"
         ]
     },
     "tearoom": {
