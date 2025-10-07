@@ -348,7 +348,8 @@
             "param":{
                 "template": "Combat/MaskedAutoFightDisabled.png",
                 "roi" : [1184,113,95,96],
-                "green_mask": true}
+                "green_mask": true,
+                "threshold": 0.9}  //调高阈值防止误把开启识别为关闭
         },
         "action": {
             "type":"Click"
@@ -367,6 +368,8 @@
     },
     "博物研学.局内.第三步战斗结算点击确认": {
         "pre_wait_freezes": 2000,
+        "timeout": 30000,  //一局战斗最多300秒？
+        "post_wait_freezes": 5000,  //结束后等待5秒再进行点击？
         "recognition": {
             "type":"OCR",
             "param":{
@@ -436,21 +439,18 @@
                 "duration": 700,
                 "end_hold": 1500  //结尾摁住，增强稳定性
             }
-        }
+        },
+        "next": "博物研学.局内.第四步往中走"
     },
     "博物研学.局内.第四步往中走": {
-        "post_wait_freezes": 1000,
-        //由于滑动不稳定？不得已改用这个？
-        "recognition": {
-            "type":"TemplateMatch",
-            "param":{
-                "template": "Research/Buff/目标驻足小憩.png",
-                "roi" : [419,314,325,199]
+        "post_wait_freezes": 400,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target" : [279,391,55,56]
             }
         },
-        "action": {
-            "type":"Click"
-        }
+        "next": "博物研学.局内.第四步事件确认"
     },
     "博物研学.局内.第四步事件确认": {
         "pre_wait_freezes": 400,
@@ -460,7 +460,7 @@
                 "target": [1005,499,77,30]
             }
         },
-        "next": "博物研学.局内.第一步奇策确认"
+        "next": "博物研学.局内.第四步奇策确认"
     },
     "博物研学.局内.第四步奇策确认": {
         "pre_wait_freezes": 400,
@@ -470,7 +470,67 @@
                 "target": [841,619,104,43]
             }
         },
-        "next": "博物研学.局内.第二步往上走"
+        "next": "博物研学.局内.第五步往上走"
+    },
+    "博物研学.局内.第五步往上走": {
+        "post_wait_freezes": 400,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target" : [534,324,46,48]
+            }
+        },
+        "next": "博物研学.局内.第五步导入确认"
+    },
+    "博物研学.局内.第五步导入确认": {
+        "pre_wait_freezes": 400,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [1005,499,77,30]
+            }
+        },
+        "next": "博物研学.局内.第五步点击空槽"
+    },
+    "博物研学.局内.第五步点击空槽": {
+        "pre_wait_freezes": 200,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [769,253,113,124]
+            }
+        },
+        "next": "博物研学.局内.选择筛选"
+    },
+    "博物研学.局内.选择筛选": {
+        "pre_wait_freezes": 600,  //停顿较长时间
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [1204,12,37,36]
+            }
+        },
+        "next": "博物研学.局内.选择轻锐"
+    },
+    "博物研学.局内.选择轻锐": {
+        "pre_wait_freezes": 200,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [650,213,53,41]
+            }
+        },
+        "next": "博物研学.局内.确认_2"
+    },
+    "博物研学.局内.确定_2": {
+        "pre_wait_freezes": 200,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [791,528,110,42]
+            }
+        },
+        "post_wait_freezes": 200
     },
     "博物研学.SelectMapOrPass": {
         "next": [

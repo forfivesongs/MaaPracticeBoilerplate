@@ -11,8 +11,53 @@
         "action": "Click",
         "post_delay": 3000,
         "next": [
-            "进入开始训练"
+            "结算通识外勤"
         ]
+    },
+    "结算通识外勤": {
+        "recognition": "TemplateMatch",
+        "template": "Training/通识课程外勤.png",
+        "action": "Click",
+        "post_wait_freezes": 200,
+        "next": [
+          "点击一键领取",
+          "Quit_通识外勤"]
+    },
+    "点击一键领取": {
+        "recognition": {
+            "type":"OCR",
+            "param": {
+                "expected": "一键领取",
+                "roi" : [20,617,237,54]
+            }
+        },
+        "action": "Click",
+        "next": "点击领取"
+    },
+    "点击领取": {
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [569,545,139,54]
+            }
+        },
+        "next": "确认_通识外勤"
+    },
+    "确认_通识外勤": {
+        "action": "Click",
+        "pre_wait_freezes": 500,
+        "next": [
+            "Quit_通识外勤"
+        ]
+    },
+    "Quit_通识外勤": {
+        "pre_wait_freezes": 500,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [34,11,43,43]
+            }
+        }
     },
     "进入开始训练": {
         "recognition": "TemplateMatch",
