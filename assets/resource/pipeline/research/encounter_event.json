@@ -1,8 +1,8 @@
 {
-    "Research.ResolveResultOfAnecdoteChoice": {
-        "next": "Research.ResolveResultOfAnecdoteChoice.Wait"
+    "博物研学.ResolveResultOfAnecdoteChoice": {
+        "next": "博物研学.ResolveResultOfAnecdoteChoice.Wait"
     },
-    "Research.ResolveResultOfAnecdoteChoice.Wait": {
+    "博物研学.ResolveResultOfAnecdoteChoice.Wait": {
         "post_wait_freezes": {
             "target": [
                 200,
@@ -13,9 +13,9 @@
             "time": 200
         },
         "times_limit": 4,
-        "next": "Research.ResolveResultOfAnecdoteChoice.Exec"
+        "next": "博物研学.ResolveResultOfAnecdoteChoice.Exec"
     },
-    "Research.ResolveResultOfAnecdoteChoice.Exec": {
+    "博物研学.ResolveResultOfAnecdoteChoice.Exec": {
         "action": "Click",
         "target": [
             362,
@@ -24,13 +24,13 @@
             0
         ]
     },
-    "Research.ResolveGotExtraResourceOnEventDone": {
+    "博物研学.ResolveGotExtraResourceOnEventDone": {
         "next": [
-            "Research.ResolveGotMapClues",
+            "博物研学.ResolveGotMapClues",
             "Common.ResolveGotStuff"
         ]
     },
-    "Research.ResolveGotMapClues": {
+    "博物研学.ResolveGotMapClues": {
         "recognition": "TemplateMatch",
         "template": "Research/EncounterEvent/GotClues.png",
         "roi": [
@@ -47,10 +47,10 @@
             0
         ]
     },
-    "Research.ResolveEncounterEvent": {
+    "博物研学.ResolveEncounterEvent": {
         "recognition": "Custom",
-        "custom_recognition": "Research.ParseAnecdote",
+        "custom_recognition": "博物研学.ParseAnecdote",
         "action": "Custom",
-        "custom_action": "Research.ResolveAnecdote"
+        "custom_action": "博物研学.ResolveAnecdote"
     }
 }

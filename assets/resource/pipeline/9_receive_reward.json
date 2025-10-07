@@ -1,13 +1,13 @@
 {
-    "task1": {
+    "领取日常周常游历奖励": {
         "next": [
-            "daily1",
-            "weekly1",
-            "travel1",
-            "mission1"
+            "进入任务界面",
+            "进入周常任务界面",
+            "进入游历界面",
+            "进入游历_任务界面"
         ]
     },
-    "daily1": {
+    "进入任务界面": {
         "recognition": "OCR",
         "expected": "任务",
         "roi": [
@@ -18,12 +18,12 @@
         ],
         "action": "Click",
         "next": [
-            "all1",
-            "weekly1",
-            "Quit1"
+            "点击全部领取",
+            "进入周常任务界面",
+            "Quit_任务"
         ]
     },
-    "all1": {
+    "点击全部领取": {
         "recognition": "OCR",
         "expected": "全部领取",
         "action": "Click",
@@ -35,27 +35,27 @@
             150
         ],
         "next": [
-            "material1",
-            "weekly1",
-            "mission1",
-            "challenge",
-            "reward1"
+            "确认_任务",
+            "进入周常任务界面",
+            "进入游历_任务界面",
+            "进入游历_任务_挑战界面",
+            "进入游历_奖励界面"
         ]
     },
-    "material1": {
+    "确认_任务": {
         "recognition": "OCR",
         "expected": "获得物资",
         "action": "Click",
-        "post_delay": 3000,
+        "post_delay": 1000,
         "next": [
-            "all1",
-            "weekly1",
-            "mission1",
-            "reward1",
+            "点击全部领取",
+            "进入周常任务界面",
+            "进入游历_任务界面",
+            "进入游历_奖励界面",
             "Quit"
         ]
     },
-    "weekly1": {
+    "进入周常任务界面": {
         "recognition": "OCR",
         "expected": "周常",
         "roi": [
@@ -66,12 +66,12 @@
         ],
         "action": "Click",
         "next": [
-            "all1",
-            "material1",
-            "Quit1"
+            "点击全部领取",
+            "确认_任务",
+            "Quit_任务"
         ]
     },
-    "travel1": {
+    "进入游历界面": {
         "recognition": "OCR",
         "expected": "游历",
         "roi": [
@@ -82,13 +82,13 @@
         ],
         "action": "Click",
         "next": [
-            "mission1",
-            "challenge",
-            "reward1",
-            "all1"
+            "进入游历_任务界面",
+            "进入游历_任务_挑战界面",
+            "进入游历_奖励界面",
+            "点击全部领取"
         ]
     },
-    "mission1": {
+    "进入游历_任务界面": {
         "recognition": "OCR",
         "expected": "任务",
         "roi": [
@@ -98,23 +98,24 @@
             195
         ],
         "action": "Click",
+        "post_delay": 1000,
         "next": [
-            "all1",
-            "challenge",
-            "reward1",
+            "点击全部领取",
+            "进入游历_任务_挑战界面",
+            "进入游历_奖励界面",
             "Quit"
         ]
     },
-    "challenge": {
+    "进入游历_任务_挑战界面": {
         "recognition": "OCR",
         "expected": "挑战",
         "action": "Click",
         "next": [
-            "all1",
-            "reward1"
+            "点击全部领取",
+            "进入游历_奖励界面"
         ]
     },
-    "reward1": {
+    "进入游历_奖励界面": {
         "recognition": "OCR",
         "expected": "奖励",
         "roi": [
@@ -124,18 +125,19 @@
             81
         ],
         "action": "Click",
+        "post_delay": 1000,
         "next": [
-            "all1",
+            "点击全部领取",
             "Quit"
         ]
     },
-    "Quit1": {
+    "Quit_任务": {
         "recognition": "TemplateMatch",
-        "template": "receive_reward/01.png",
+        "template": "Collect/返回按钮.png",
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "travel1"
+            "进入游历界面"
         ]
     }
 }

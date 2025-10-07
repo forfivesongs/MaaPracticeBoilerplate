@@ -1,5 +1,5 @@
 {
-    "Research.WaitMatchingGameToStart": {
+    "博物研学.WaitMatchingGameToStart": {
         "recognition": "TemplateMatch",
         "template": "Research/MatchingGame/StartInitialState.png",
         "roi": [

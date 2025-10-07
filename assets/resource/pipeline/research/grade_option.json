@@ -1,10 +1,10 @@
 {
-    "Research.WaitAndResolveGradeChangeOrSkip": {
+    "博物研学.WaitAndResolveGradeChangeOrSkip": {
         "timeout": 10000,
         "timeout_next": "Utils.LeafTask",
-        "next": "Research.ResolveGradeChange"
+        "next": "博物研学.ResolveGradeChange"
     },
-    "Research.ResolveGradeChange": {
+    "博物研学.ResolveGradeChange": {
         "recognition": "TemplateMatch",
         "template": "Research/GradeOption/Hint.png",
         "roi": [
@@ -14,11 +14,11 @@
             23
         ],
         "next": [
-            "Research.ResolveGradeChange.TestOnUpgrade",
-            "Research.ResolveGradeChange.TestOnDowngrade"
+            "博物研学.ResolveGradeChange.TestOnUpgrade",
+            "博物研学.ResolveGradeChange.TestOnDowngrade"
         ]
     },
-    "Research.ResolveGradeChange.TestOnUpgrade": {
+    "博物研学.ResolveGradeChange.TestOnUpgrade": {
         "recognition": "OCR",
         "roi": [
             598,
@@ -27,9 +27,9 @@
             52
         ],
         "expected": "升阶",
-        "next": "Research.ResolveGradeChange.Upgrade"
+        "next": "博物研学.ResolveGradeChange.Upgrade"
     },
-    "Research.ResolveGradeChange.TestOnDowngrade": {
+    "博物研学.ResolveGradeChange.TestOnDowngrade": {
         "recognition": "OCR",
         "roi": [
             598,
@@ -38,31 +38,31 @@
             52
         ],
         "expected": "降阶",
-        "next": "Research.ResolveGradeChange.Downgrade"
+        "next": "博物研学.ResolveGradeChange.Downgrade"
     },
-    "Research.ResolveGradeChange.Upgrade": {
+    "博物研学.ResolveGradeChange.Upgrade": {
         "recognition": "Custom",
-        "custom_recognition": "Research.ParseGradeOptionsOnModify",
+        "custom_recognition": "博物研学.ParseGradeOptionsOnModify",
         "action": "Custom",
-        "custom_action": "Research.SelectGradeOption",
+        "custom_action": "博物研学.SelectGradeOption",
         "custom_action_param": {
             "mode": "upgrade",
             "policy": "defensive"
         },
-        "next": "Research.ResolveGradeChange.Commit"
+        "next": "博物研学.ResolveGradeChange.Commit"
     },
-    "Research.ResolveGradeChange.Downgrade": {
+    "博物研学.ResolveGradeChange.Downgrade": {
         "recognition": "Custom",
-        "custom_recognition": "Research.ParseGradeOptionsOnModify",
+        "custom_recognition": "博物研学.ParseGradeOptionsOnModify",
         "action": "Custom",
-        "custom_action": "Research.SelectGradeOption",
+        "custom_action": "博物研学.SelectGradeOption",
         "custom_action_param": {
             "mode": "downgrade",
             "policy": "defensive"
         },
-        "next": "Research.ResolveGradeChange.Commit"
+        "next": "博物研学.ResolveGradeChange.Commit"
     },
-    "Research.ResolveGradeChange.Commit": {
+    "博物研学.ResolveGradeChange.Commit": {
         "recognition": "TemplateMatch",
         "template": "Research/GradeOption/Commit.png",
         "roi": [

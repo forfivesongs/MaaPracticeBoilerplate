@@ -1,5 +1,5 @@
 {
-    "Research.ConfirmBuffSelection": {
+    "博物研学.ConfirmBuffSelection": {
         "recognition": "TemplateMatch",
         "template": "Research/Buff/Confirm.png",
         "roi": [
@@ -18,13 +18,13 @@
         ],
         "times_limit": 32
     },
-    "Research.ResolveGotBuff": {
+    "博物研学.ResolveGotBuff": {
         "next": [
-            "Research.ResolveGotBuff.Buff",
-            "Research.ResolveGotBuff.Debuff"
+            "博物研学.ResolveGotBuff.Buff",
+            "博物研学.ResolveGotBuff.Debuff"
         ]
     },
-    "Research.ResolveGotBuff.Buff": {
+    "博物研学.ResolveGotBuff.Buff": {
         "recognition": "TemplateMatch",
         "template": "Research/Buff/GotBuff.png",
         "roi": [
@@ -34,9 +34,9 @@
             29
         ],
         "threshold": 0.9,
-        "next": "Research.ResolveGotBuff.Done"
+        "next": "博物研学.ResolveGotBuff.Done"
     },
-    "Research.ResolveGotBuff.Debuff": {
+    "博物研学.ResolveGotBuff.Debuff": {
         "recognition": "TemplateMatch",
         "template": "Research/Buff/GotDebuff.png",
         "roi": [
@@ -46,9 +46,9 @@
             27
         ],
         "threshold": 0.9,
-        "next": "Research.ResolveGotBuff.Done"
+        "next": "博物研学.ResolveGotBuff.Done"
     },
-    "Research.ResolveGotBuff.Done": {
+    "博物研学.ResolveGotBuff.Done": {
         "action": "Click",
         "target": [
             640,
@@ -57,7 +57,7 @@
             0
         ]
     },
-    "Research.GainBuff": {
+    "博物研学.GainBuff": {
         "recognition": "OCR",
         "expected": [
             "选择一个初始战斗状态",
@@ -65,12 +65,12 @@
             "获得新的战斗状态",
             "获得一个负向战斗状态"
         ],
-        "next": "Research.ResolveCandidateBuffs"
+        "next": "博物研学.ResolveCandidateBuffs"
     },
-    "Research.ResolveCandidateBuffs": {
+    "博物研学.ResolveCandidateBuffs": {
         "recognition": "Custom",
-        "custom_recognition": "Research.GetCandidateBuffs",
+        "custom_recognition": "博物研学.GetCandidateBuffs",
         "action": "Custom",
-        "custom_action": "Research.ResolveBuffSelection"
+        "custom_action": "博物研学.ResolveBuffSelection"
     }
 }

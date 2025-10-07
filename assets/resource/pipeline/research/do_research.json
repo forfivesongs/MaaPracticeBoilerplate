@@ -1,12 +1,12 @@
 {
-    "Research.EnsureInResearchField": {
+    "博物研学.EnsureInResearchField": {
         "next": [
-            "Research.EnsureInResearchField.CheckAndPass",
-            "Research.EnsureInResearchField.HomePage",
+            "博物研学.EnsureInResearchField.CheckAndPass",
+            "博物研学.EnsureInResearchField.HomePage",
             "Utils.Failure"
         ]
     },
-    "Research.EnsureInResearchField.HomePage": {
+    "博物研学.EnsureInResearchField.HomePage": {
         "recognition": "TemplateMatch",
         "template": "Common/ResearchEntry.png",
         "roi": [
@@ -17,9 +17,9 @@
         ],
         "action": "Click",
         "post_delay": 2000,
-        "next": "Research.EnsureInResearchField.CheckAndPass"
+        "next": "博物研学.EnsureInResearchField.CheckAndPass"
     },
-    "Research.EnsureInResearchField.CheckAndPass": {
+    "博物研学.EnsureInResearchField.CheckAndPass": {
         "recognition": "TemplateMatch",
         "template": "Research/Field.png",
         "roi": [
@@ -29,26 +29,42 @@
             25
         ]
     },
-    "Research.EnterDoResearch": {
+    "博物研学.开始博物研学": {
         "next": [
-            "Research.EnterDoResearch.Start",
-            "Research.EnterDoResearch.Continue",
+            "博物研学.开始博物研学.开始",
+            "博物研学.开始博物研学.Continue",
             "Utils.Failure"
         ]
     },
-    "Research.EnterDoResearch.Start": {
-        "recognition": "TemplateMatch",
-        "template": "Research/Start.png",
-        "roi": [
-            980,
-            644,
-            161,
-            38
-        ],
-        "action": "Click",
-        "next": "Research.EnterDoResearch.PostCheck"
+    "博物研学.开始博物研学.开始": {
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [
+                    1084,
+                    334,
+                    169,
+                    66
+                ]
+            }
+        },
+        "next": "博物研学.开始博物研学.关闭周常奖励"
     },
-    "Research.EnterDoResearch.Continue": {
+    "博物研学.开始博物研学.关闭周常奖励": {
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [
+                    670,
+                    592,
+                    112,
+                    76
+                ]
+            }
+        },
+        "next": "博物研学.开始博物研学.选择金银纪行"
+    },
+    "博物研学.开始博物研学.Continue": {
         "recognition": "TemplateMatch",
         "template": "Research/Continue.png",
         "roi": [
@@ -59,30 +75,205 @@
         ],
         "action": "Click"
     },
-    "Research.EnterDoResearch.PostCheck": {
+    "博物研学.开始博物研学.选择金银纪行": {
         "pre_wait_freezes": 200,
-        "next": [
-            "Research.EnterDoResearch.OnSelect",
-            "Utils.Failure"
-        ]
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [
+                    22,
+                    259,
+                    215,
+                    107
+                ]
+            }
+        },
+        "next": "博物研学.开始.点击进入主题"
     },
-    "Research.EnterDoResearch.OnSelect": {
-        "recognition": "TemplateMatch",
-        "template": "Research/DoResearch/Hint.png",
-        "roi": [
-            353,
-            84,
-            573,
-            41
-        ]
+    "博物研学.开始.点击进入主题": {
+        "pre_wait_freezes": 200,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [
+                    930,
+                    635,
+                    255,
+                    54
+                ]
+            }
+        },
+        "next": "博物研学.开始.点击研学启程"
     },
-    "Research.SelectMapOrPass": {
+    "博物研学.开始.点击研学启程": {
+        "pre_wait_freezes": 200,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [
+                    930,
+                    635,
+                    255,
+                    54
+                ]
+            }
+        },
+        "next": "博物研学.开始.点击噩魇"
+    },
+    "博物研学.开始.点击噩魇": {
+        "pre_wait_freezes": 200,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [532,218,210,304]
+            }
+        },
+        "next": "博物研学.开始.选择难度普通"
+    },
+    "博物研学.开始.选择难度普通": {
+        "pre_wait_freezes": 200,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [247,266,161,43]
+            }
+        },
+        "next": "博物研学.开始.选择初始角色"
+    },
+    "博物研学.开始.选择初始角色": {
+        "pre_wait_freezes": 200,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [851,418,60,69]
+            }
+        },
+        "next": "博物研学.开始.选择筛选"
+    },
+    "博物研学.开始.选择筛选": {
+        "pre_wait_freezes": 200,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [1209,13,34,33]
+            }
+        },
+        "next": "博物研学.开始.选择构术"
+    },
+    "博物研学.开始.选择构术": {
+        "pre_wait_freezes": 200,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [815,220,49,27]
+            }
+        },
+        "next": "博物研学.开始.确定_1"
+    },
+    "博物研学.开始.确定_1": {
+        "pre_wait_freezes": 200,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [791,528,110,42]
+            }
+        },
+        "next": "博物研学.开始.向右滑动一段"
+    },
+    "博物研学.开始.向右滑动一段": {
+        "pre_wait_freezes": 200,
+        "action": {
+            "type":"Swipe",
+            "param": {
+                "begin": [500,100,10,10],
+                "end": [100,100,10,10]
+            }
+        },
+        "next": "博物研学.开始.选择铜壶滴漏"
+    },
+    "博物研学.开始.选择铜壶滴漏": {
+        "pre_wait_freezes": 200,
+        "recognition": "OCR",
+        "expected": "铜壶滴漏",
+        "action": {
+            "type":"Click"
+        },
+        "next": "博物研学.开始.选择莫高窟记"
+    },
+    "博物研学.开始.选择莫高窟记": {
+        "pre_wait_freezes": 200,
+        "recognition": "OCR",
+        "expected": "莫高窟记",
+        "action": {
+            "type":"Click"
+        },
+        "next": "博物研学.开始.选择断臂维纳斯"
+    },
+    "博物研学.开始.选择断臂维纳斯": {
+        "pre_wait_freezes": 200,
+        "recognition": "OCR",
+        "expected": "断臂维纳斯",
+        "action": {
+            "type":"Click"
+        },
+        "next": "博物研学.开始.选择秦公镈"
+    },
+    "博物研学.开始.选择秦公镈": {
+        "pre_wait_freezes": 200,
+        "recognition": "OCR",
+        "expected": "秦公镈",
+        "action": {
+            "type":"Click"
+        },
+        "next": "博物研学.开始.确定初始角色"
+    },
+    "博物研学.开始.确定初始角色": {
+        "pre_wait_freezes": 200,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [1143,671,92,34]
+            }
+        },
+        "next": "博物研学.开始.选择辅助效果方向"
+    },
+    "博物研学.开始.选择辅助效果方向": {
+        "pre_wait_freezes": 200,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [886,549,261,42]
+            }
+        },
+        "next": "博物研学.开始.进入研学（使用默认“破军”奇策）"
+    },
+    "博物研学.开始.进入研学（使用默认“破军”奇策）": {
+        "pre_wait_freezes": 200,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [886,549,261,42]
+            }
+        },
+        "next": "博物研学.开始.第一步往上走"
+    },
+    "博物研学.开始.第一步往上走": {
+        "pre_wait_freezes": 200,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [554,267,49,52]
+            }
+        },
+        "next": "博物研学.开始.进入研学（使用默认“破军”奇策）"
+    },
+    "博物研学.SelectMapOrPass": {
         "next": [
-            "Research.SelectMapOrPass.CheckAndSelect",
+            "博物研学.SelectMapOrPass.CheckAndSelect",
             "Utils.LeafTask"
         ]
     },
-    "Research.SelectMapOrPass.CheckAndSelect": {
+    "博物研学.SelectMapOrPass.CheckAndSelect": {
         "recognition": "TemplateMatch",
         "template": "Research/DoResearch/Hint.png",
         "roi": [
@@ -92,13 +283,13 @@
             41
         ],
         "next": [
-            "Research.SelectMapOrPass.XueJingHanLinTu",
-            "Research.SelectMapOrPass.QianLiJiangShanTu",
-            "Research.SelectMapOrPass.XiShanXingLvTu",
+            "博物研学.SelectMapOrPass.XueJingHanLinTu",
+            "博物研学.SelectMapOrPass.QianLiJiangShanTu",
+            "博物研学.SelectMapOrPass.XiShanXingLvTu",
             "Utils.Failure"
         ]
     },
-    "Research.SelectMapOrPass.XueJingHanLinTu": {
+    "博物研学.SelectMapOrPass.XueJingHanLinTu": {
         "recognition": "TemplateMatch",
         "template": "Research/DoResearch/XueJingHanLinTu.png",
         "roi": [
@@ -115,7 +306,7 @@
             0
         ]
     },
-    "Research.SelectMapOrPass.QianLiJiangShanTu": {
+    "博物研学.SelectMapOrPass.QianLiJiangShanTu": {
         "recognition": "TemplateMatch",
         "template": "Research/DoResearch/QianLiJiangShanTu.png",
         "roi": [
@@ -132,7 +323,7 @@
             0
         ]
     },
-    "Research.SelectMapOrPass.XiShanXingLvTu": {
+    "博物研学.SelectMapOrPass.XiShanXingLvTu": {
         "recognition": "TemplateMatch",
         "template": "Research/DoResearch/XiShanXingLvTu.png",
         "roi": [
@@ -149,33 +340,33 @@
             0
         ]
     },
-    "Research.LocateRole": {
+    "博物研学.LocateRole": {
         "next": [
-            "Research.LocateRole.Male",
-            "Research.LocateRole.Female"
+            "博物研学.LocateRole.Male",
+            "博物研学.LocateRole.Female"
         ]
     },
-    "Research.LocateRole.Male": {
+    "博物研学.LocateRole.Male": {
         "recognition": "TemplateMatch",
         "template": "Research/DoResearch/MaskedMaleRole.png",
         "green_mask": true,
         "threshold": 0.6
     },
-    "Research.LocateRole.Female": {
+    "博物研学.LocateRole.Female": {
         "recognition": "TemplateMatch",
         "template": "Research/DoResearch/MaskedFemaleRole.png",
         "green_mask": true,
         "threshold": 0.6
     },
-    "Research.EnsureRoleNoMotion": {
+    "博物研学.EnsureRoleNoMotion": {
         "pre_wait_freezes": 500,
         "next": [
-            "Research.LocateRole.Male",
-            "Research.LocateRole.Female",
+            "博物研学.LocateRole.Male",
+            "博物研学.LocateRole.Female",
             "Utils.Failure"
         ]
     },
-    "Research.SelectFightRoute": {
+    "博物研学.SelectFightRoute": {
         "recognition": "OCR",
         "expected": "推荐等级",
         "roi": [
@@ -185,12 +376,12 @@
             600
         ],
         "next": [
-            "Research.SelectFightRoute.Fight60",
-            "Research.SelectFightRoute.Fight70",
-            "Research.SelectFightRoute.Fight80"
+            "博物研学.SelectFightRoute.Fight60",
+            "博物研学.SelectFightRoute.Fight70",
+            "博物研学.SelectFightRoute.Fight80"
         ]
     },
-    "Research.SelectFightRoute.Fight60": {
+    "博物研学.SelectFightRoute.Fight60": {
         "recognition": "OCR",
         "expected": "推荐等级：60",
         "roi": [
@@ -206,9 +397,9 @@
             -50,
             -30
         ],
-        "next": "Research.SelectRoute"
+        "next": "博物研学.SelectRoute"
     },
-    "Research.SelectFightRoute.Fight70": {
+    "博物研学.SelectFightRoute.Fight70": {
         "recognition": "OCR",
         "expected": "推荐等级：70",
         "roi": [
@@ -224,9 +415,9 @@
             -50,
             -30
         ],
-        "next": "Research.SelectRoute"
+        "next": "博物研学.SelectRoute"
     },
-    "Research.SelectFightRoute.Fight80": {
+    "博物研学.SelectFightRoute.Fight80": {
         "recognition": "OCR",
         "expected": "推荐等级：80",
         "roi": [
@@ -242,14 +433,14 @@
             -50,
             -30
         ],
-        "next": "Research.SelectRoute"
+        "next": "博物研学.SelectRoute"
     },
-    "Research.SelectRoute": {
+    "博物研学.SelectRoute": {
         "recognition": "TemplateMatch",
         "template": "Research/DoResearch/SelectRoute.png",
         "action": "Click"
     },
-    "Research.FightAssess": {
+    "博物研学.FightAssess": {
         "recognition": "OCR",
         "expected": "战前评定",
         "roi": [
@@ -259,9 +450,9 @@
             27
         ],
         "post_wait_freezes": 200,
-        "next": "Research.FightAssess.Done"
+        "next": "博物研学.FightAssess.Done"
     },
-    "Research.FightAssess.Done": {
+    "博物研学.FightAssess.Done": {
         "recognition": "TemplateMatch",
         "template": "Research/DoResearch/MaskedAssessDone.png",
         "green_mask": true,
@@ -274,7 +465,7 @@
             0
         ]
     },
-    "Research.FirstSingleRoute.Prerequisite": {
+    "博物研学.FirstSingleRoute.Prerequisite": {
         "recognition": "TemplateMatch",
         "template": [
             "Research/DoResearch/MaskedMaleRole.png",
@@ -290,11 +481,11 @@
         ],
         "action": "Click"
     },
-    "Research.FirstSingleRoute": {
+    "博物研学.FirstSingleRoute": {
         "recognition": "Custom",
         "custom_recognition": "Utils.TwoStageTest",
         "custom_recognition_param": {
-            "prerequisite": "Research.FirstSingleRoute.Prerequisite",
+            "prerequisite": "博物研学.FirstSingleRoute.Prerequisite",
             "recognition": {
                 "recognition": "TemplateMatch",
                 "template": "Research/DoResearch/SelectRoute.png"
@@ -303,7 +494,7 @@
         },
         "action": "Click"
     },
-    "Research.SecondSingleRouteFromFight60.Prerequisite": {
+    "博物研学.SecondSingleRouteFromFight60.Prerequisite": {
         "recognition": "TemplateMatch",
         "template": [
             "Research/DoResearch/MaskedMaleRole.png",
@@ -319,11 +510,11 @@
         ],
         "action": "Click"
     },
-    "Research.SecondSingleRouteFromFight60": {
+    "博物研学.SecondSingleRouteFromFight60": {
         "recognition": "Custom",
         "custom_recognition": "Utils.TwoStageTest",
         "custom_recognition_param": {
-            "prerequisite": "Research.SecondSingleRouteFromFight60.Prerequisite",
+            "prerequisite": "博物研学.SecondSingleRouteFromFight60.Prerequisite",
             "recognition": {
                 "recognition": "TemplateMatch",
                 "template": "Research/DoResearch/SelectRoute.png"
@@ -332,7 +523,7 @@
         },
         "action": "Click"
     },
-    "Research.SecondSingleRouteFromFight70.Prerequisite": {
+    "博物研学.SecondSingleRouteFromFight70.Prerequisite": {
         "recognition": "TemplateMatch",
         "template": [
             "Research/DoResearch/MaskedMaleRole.png",
@@ -348,11 +539,11 @@
         ],
         "action": "Click"
     },
-    "Research.SecondSingleRouteFromFight70": {
+    "博物研学.SecondSingleRouteFromFight70": {
         "recognition": "Custom",
         "custom_recognition": "Utils.TwoStageTest",
         "custom_recognition_param": {
-            "prerequisite": "Research.SecondSingleRouteFromFight70.Prerequisite",
+            "prerequisite": "博物研学.SecondSingleRouteFromFight70.Prerequisite",
             "recognition": {
                 "recognition": "TemplateMatch",
                 "template": "Research/DoResearch/SelectRoute.png"
@@ -361,7 +552,7 @@
         },
         "action": "Click"
     },
-    "Research.SecondSingleRouteFromFight80.Prerequisite": {
+    "博物研学.SecondSingleRouteFromFight80.Prerequisite": {
         "recognition": "TemplateMatch",
         "template": [
             "Research/DoResearch/MaskedMaleRole.png",
@@ -377,11 +568,11 @@
         ],
         "action": "Click"
     },
-    "Research.SecondSingleRouteFromFight80": {
+    "博物研学.SecondSingleRouteFromFight80": {
         "recognition": "Custom",
         "custom_recognition": "Utils.TwoStageTest",
         "custom_recognition_param": {
-            "prerequisite": "Research.SecondSingleRouteFromFight80.Prerequisite",
+            "prerequisite": "博物研学.SecondSingleRouteFromFight80.Prerequisite",
             "recognition": {
                 "recognition": "TemplateMatch",
                 "template": "Research/DoResearch/SelectRoute.png"
@@ -390,7 +581,7 @@
         },
         "action": "Click"
     },
-    "Research.ThirdSingleRoute.Prerequisite": {
+    "博物研学.ThirdSingleRoute.Prerequisite": {
         "recognition": "TemplateMatch",
         "template": [
             "Research/DoResearch/MaskedMaleRole.png",
@@ -406,11 +597,11 @@
         ],
         "action": "Click"
     },
-    "Research.ThirdSingleRoute": {
+    "博物研学.ThirdSingleRoute": {
         "recognition": "Custom",
         "custom_recognition": "Utils.TwoStageTest",
         "custom_recognition_param": {
-            "prerequisite": "Research.ThirdSingleRoute.Prerequisite",
+            "prerequisite": "博物研学.ThirdSingleRoute.Prerequisite",
             "recognition": {
                 "recognition": "TemplateMatch",
                 "template": "Research/DoResearch/SelectRoute.png"
@@ -419,7 +610,7 @@
         },
         "action": "Click"
     },
-    "Research.ForthSingleRoute.Prerequisite": {
+    "博物研学.ForthSingleRoute.Prerequisite": {
         "recognition": "TemplateMatch",
         "template": [
             "Research/DoResearch/MaskedMaleRole.png",
@@ -435,11 +626,11 @@
         ],
         "action": "Click"
     },
-    "Research.ForthSingleRoute": {
+    "博物研学.ForthSingleRoute": {
         "recognition": "Custom",
         "custom_recognition": "Utils.TwoStageTest",
         "custom_recognition_param": {
-            "prerequisite": "Research.ForthSingleRoute.Prerequisite",
+            "prerequisite": "博物研学.ForthSingleRoute.Prerequisite",
             "recognition": {
                 "recognition": "TemplateMatch",
                 "template": "Research/DoResearch/SelectRoute.png"
@@ -448,7 +639,7 @@
         },
         "action": "Click"
     },
-    "Research.FifthSingleRoute.Prerequisite": {
+    "博物研学.FifthSingleRoute.Prerequisite": {
         "recognition": "TemplateMatch",
         "template": [
             "Research/DoResearch/MaskedMaleRole.png",
@@ -464,11 +655,11 @@
         ],
         "action": "Click"
     },
-    "Research.FifthSingleRoute": {
+    "博物研学.FifthSingleRoute": {
         "recognition": "Custom",
         "custom_recognition": "Utils.TwoStageTest",
         "custom_recognition_param": {
-            "prerequisite": "Research.FifthSingleRoute.Prerequisite",
+            "prerequisite": "博物研学.FifthSingleRoute.Prerequisite",
             "recognition": {
                 "recognition": "TemplateMatch",
                 "template": "Research/DoResearch/SelectRoute.png"
@@ -477,7 +668,7 @@
         },
         "action": "Click"
     },
-    "Research.FirstTriRoute.Prerequisite": {
+    "博物研学.FirstTriRoute.Prerequisite": {
         "recognition": "TemplateMatch",
         "template": [
             "Research/DoResearch/MaskedMaleRole.png",
@@ -493,11 +684,11 @@
         ],
         "action": "Click"
     },
-    "Research.FirstTriRoute": {
+    "博物研学.FirstTriRoute": {
         "recognition": "Custom",
         "custom_recognition": "Utils.TwoStageTest",
         "custom_recognition_param": {
-            "prerequisite": "Research.FirstTriRoute.Prerequisite",
+            "prerequisite": "博物研学.FirstTriRoute.Prerequisite",
             "recognition": {
                 "recognition": "TemplateMatch",
                 "template": "Research/DoResearch/SelectRoute.png"
@@ -506,7 +697,7 @@
         },
         "action": "Click"
     },
-    "Research.SecondTriRoute.Prerequisite": {
+    "博物研学.SecondTriRoute.Prerequisite": {
         "recognition": "TemplateMatch",
         "template": [
             "Research/DoResearch/MaskedMaleRole.png",
@@ -522,11 +713,11 @@
         ],
         "action": "Click"
     },
-    "Research.SecondTriRoute": {
+    "博物研学.SecondTriRoute": {
         "recognition": "Custom",
         "custom_recognition": "Utils.TwoStageTest",
         "custom_recognition_param": {
-            "prerequisite": "Research.SecondTriRoute.Prerequisite",
+            "prerequisite": "博物研学.SecondTriRoute.Prerequisite",
             "recognition": {
                 "recognition": "TemplateMatch",
                 "template": "Research/DoResearch/SelectRoute.png"
@@ -535,19 +726,19 @@
         },
         "action": "Click"
     },
-    "Research.CompleteAndQuit": {
+    "博物研学.CompleteAndQuit": {
         "recognition": "TemplateMatch",
         "template": "Research/Done.png",
         "action": "Click"
     },
-    "Research.ResolveAnyGame": {
+    "博物研学.ResolveAnyGame": {
         "next": [
-            "Research.MatchingGame",
-            "Research.FishingGame",
-            "Research.RecylceGame"
+            "博物研学.MatchingGame",
+            "博物研学.FishingGame",
+            "博物研学.RecylceGame"
         ]
     },
-    "Research.MatchingGame": {
+    "博物研学.MatchingGame": {
         "recognition": "OCR",
         "expected": "请注意文物对应位置",
         "roi": [
@@ -556,16 +747,16 @@
             442,
             49
         ],
-        "next": "Research.MatchingGame.Play"
+        "next": "博物研学.MatchingGame.Play"
     },
-    "Research.MatchingGame.Play": {
+    "博物研学.MatchingGame.Play": {
         "recognition": "Custom",
-        "custom_recognition": "Research.AnalyzeItemPairs",
+        "custom_recognition": "博物研学.AnalyzeItemPairs",
         "action": "Custom",
-        "custom_action": "Research.PerformItemPairsMatch",
-        "next": "Research.MatchingGame.Done"
+        "custom_action": "博物研学.PerformItemPairsMatch",
+        "next": "博物研学.MatchingGame.Done"
     },
-    "Research.MatchingGame.Done": {
+    "博物研学.MatchingGame.Done": {
         "recognition": "OCR",
         "expected": [
             "优",
@@ -580,19 +771,19 @@
         ],
         "action": "Click"
     },
-    "Research.FishingGame": {
+    "博物研学.FishingGame": {
         "recognition": "TemplateMatch",
         "template": "Research/FishingGame/Rod.png",
-        "next": "Research.FishingGame.Entry"
+        "next": "博物研学.FishingGame.Entry"
     },
-    "Research.FishingGame.Entry": {
+    "博物研学.FishingGame.Entry": {
         "next": [
-            "Research.FishingGame.DetectAndQuit",
-            "Research.FishingGame.PlayOnce",
+            "博物研学.FishingGame.DetectAndQuit",
+            "博物研学.FishingGame.PlayOnce",
             "Utils.LeafTask"
         ]
     },
-    "Research.FishingGame.DetectAndQuit": {
+    "博物研学.FishingGame.DetectAndQuit": {
         "recognition": "OCR",
         "expected": [
             "胜利",
@@ -606,13 +797,13 @@
         ],
         "action": "Click"
     },
-    "Research.FishingGame.PlayOnce": {
+    "博物研学.FishingGame.PlayOnce": {
         "recognition": "TemplateMatch",
         "template": "Research/FishingGame/Rod.png",
         "action": "Click",
-        "next": "Research.FishingGame.Entry"
+        "next": "博物研学.FishingGame.Entry"
     },
-    "Research.RecylceGame": {
+    "博物研学.RecylceGame": {
         "recognition": "OCR",
         "expected": "战前准备",
         "roi": [
@@ -621,15 +812,15 @@
             105,
             25
         ],
-        "next": "Research.RecylceGame.Giveup"
+        "next": "博物研学.RecylceGame.Giveup"
     },
-    "Research.RecylceGame.Giveup": {
+    "博物研学.RecylceGame.Giveup": {
         "recognition": "TemplateMatch",
         "template": "Common/Back.png",
         "action": "Click",
-        "next": "Research.RecylceGame.EnsureGiveup"
+        "next": "博物研学.RecylceGame.EnsureGiveup"
     },
-    "Research.RecylceGame.EnsureGiveup": {
+    "博物研学.RecylceGame.EnsureGiveup": {
         "recognition": "OCR",
         "expected": "是否放弃本次事件",
         "roi": [
