@@ -1,7 +1,48 @@
 {
-    "MyTask1": {},
-    "MyTask2": {},
-    "MyTask3": {},
+    "启动物华弥新": {
+        "action": {
+            "type": "StartApp",
+            "param": {
+                "package": "com.cipaishe.wuhua.bilibili"
+            }
+        },
+        "next": [
+            "启动完毕"
+        ]
+    },
+    "启动完毕": {
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "DisableNode",
+                "custom_action_param": {
+                    "node_name": "启动物华弥新"
+                }
+            }
+        }
+    },
+    "关闭公告": {
+      "recognition": "TemplateMatch",
+      "template": "公告栏关闭图标.png",
+      "action": "Click"
+    },
+    "向下滑动": {
+      "action": "Swipe",
+      "begin": [
+        100, 500, 10, 10
+      ],
+      "end": [
+        100, 100, 10, 10
+      ],
+      "next": [
+        "点击存储"
+      ]
+    },
+    "点击存储": {
+      "recognition": "OCR",
+      "expected": "存储",
+      "action": "Click"
+    },
     "MyTask4": {
         "recognition": "Custom",
         "custom_recognition": "my_reco_222",

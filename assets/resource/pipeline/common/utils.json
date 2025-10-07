@@ -1,0 +1,11 @@
+{
+    "Utils.LeafTask": {},
+    "Utils.Failure": {
+        "times_limit": 1,
+        "timeout": 1,
+        "next": "Utils.Failure.Catch"
+    },
+    "Utils.Failure.Catch": {
+        "inverse": true
+    }
+}

@@ -1,0 +1,76 @@
+{
+    "Research.ConfirmBuffSelection": {
+        "recognition": "TemplateMatch",
+        "template": "Research/Buff/Confirm.png",
+        "roi": [
+            520,
+            619,
+            240,
+            49
+        ],
+        "threshold": 0.95,
+        "action": "Click",
+        "target": [
+            640,
+            644,
+            0,
+            0
+        ],
+        "times_limit": 32
+    },
+    "Research.ResolveGotBuff": {
+        "next": [
+            "Research.ResolveGotBuff.Buff",
+            "Research.ResolveGotBuff.Debuff"
+        ]
+    },
+    "Research.ResolveGotBuff.Buff": {
+        "recognition": "TemplateMatch",
+        "template": "Research/Buff/GotBuff.png",
+        "roi": [
+            511,
+            64,
+            257,
+            29
+        ],
+        "threshold": 0.9,
+        "next": "Research.ResolveGotBuff.Done"
+    },
+    "Research.ResolveGotBuff.Debuff": {
+        "recognition": "TemplateMatch",
+        "template": "Research/Buff/GotDebuff.png",
+        "roi": [
+            482,
+            65,
+            317,
+            27
+        ],
+        "threshold": 0.9,
+        "next": "Research.ResolveGotBuff.Done"
+    },
+    "Research.ResolveGotBuff.Done": {
+        "action": "Click",
+        "target": [
+            640,
+            78,
+            0,
+            0
+        ]
+    },
+    "Research.GainBuff": {
+        "recognition": "OCR",
+        "expected": [
+            "选择一个初始战斗状态",
+            "选择两个正向战斗状态",
+            "获得新的战斗状态",
+            "获得一个负向战斗状态"
+        ],
+        "next": "Research.ResolveCandidateBuffs"
+    },
+    "Research.ResolveCandidateBuffs": {
+        "recognition": "Custom",
+        "custom_recognition": "Research.GetCandidateBuffs",
+        "action": "Custom",
+        "custom_action": "Research.ResolveBuffSelection"
+    }
+}

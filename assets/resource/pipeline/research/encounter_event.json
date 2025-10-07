@@ -1,0 +1,56 @@
+{
+    "Research.ResolveResultOfAnecdoteChoice": {
+        "next": "Research.ResolveResultOfAnecdoteChoice.Wait"
+    },
+    "Research.ResolveResultOfAnecdoteChoice.Wait": {
+        "post_wait_freezes": {
+            "target": [
+                200,
+                100,
+                920,
+                500
+            ],
+            "time": 200
+        },
+        "times_limit": 4,
+        "next": "Research.ResolveResultOfAnecdoteChoice.Exec"
+    },
+    "Research.ResolveResultOfAnecdoteChoice.Exec": {
+        "action": "Click",
+        "target": [
+            362,
+            312,
+            0,
+            0
+        ]
+    },
+    "Research.ResolveGotExtraResourceOnEventDone": {
+        "next": [
+            "Research.ResolveGotMapClues",
+            "Common.ResolveGotStuff"
+        ]
+    },
+    "Research.ResolveGotMapClues": {
+        "recognition": "TemplateMatch",
+        "template": "Research/EncounterEvent/GotClues.png",
+        "roi": [
+            454,
+            54,
+            277,
+            72
+        ],
+        "action": "Click",
+        "target": [
+            362,
+            312,
+            0,
+            0
+        ]
+    },
+    "Research.ResolveEncounterEvent": {
+        "recognition": "Custom",
+        "custom_recognition": "Research.ParseAnecdote",
+        "action": "Custom",
+        "custom_action": "Research.ResolveAnecdote"
+    }
+}

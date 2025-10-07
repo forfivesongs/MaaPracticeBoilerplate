@@ -1,0 +1,13 @@
+{
+    "Research.WaitMatchingGameToStart": {
+        "recognition": "TemplateMatch",
+        "template": "Research/MatchingGame/StartInitialState.png",
+        "roi": [
+            550,
+            152,
+            596,
+            478
+        ],
+        "threshold": 0.95
+    }
+}
