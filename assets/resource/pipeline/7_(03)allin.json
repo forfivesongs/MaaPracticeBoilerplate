@@ -1,15 +1,12 @@
 {
     "frequency": {
         "next": [
-            "fast",
+            "进行速通",
             "Start1",
-            "Speedrun1x",
-            "Speedrun2x",
-            "Speedrun4x",
-            "Speedrun10x"
+            "速通轮次最大",
         ]
     },
-    "fast": {
+    "进行速通": {
         "recognition": "OCR",
         "expected": "速通",
         "action": "Click",
@@ -22,49 +19,16 @@
         "pre_delay": 2000,
         "post_delay": 2000,
         "next": [
-            "Speedrun1x",
-            "Speedrun2x",
-            "Speedrun4x",
-            "Speedrun10x",
+            "速通轮次最大",
             "Start1"
         ]
     },
-    "Speedrun1x": {
-        "recognition": "TemplateMatch",
-        "template": "Speedrun/10.png",
+    "速通轮次最大": {
+        "recognition": "OCR",
+        "expected": "最大",
         "action": "Click",
-        "target": [
-            855,
-            420,
-            0,
-            0
-        ],
         "next": [
-            "CompleteSpeedrun"
-        ]
-    },
-    "Speedrun2x": {
-        "next": [
-            "AddSpeedrunTime2",
-            "requires_more",
-            "Sub_AddSpeedrunTime2",
-            "CompleteSpeedrun"
-        ]
-    },
-    "Speedrun4x": {
-        "next": [
-            "AddSpeedrunTime4",
-            "requires_more",
-            "Sub_AddSpeedrunTime4",
-            "CompleteSpeedrun"
-        ]
-    },
-    "Speedrun10x": {
-        "next": [
-            "AddSpeedrunTime10",
-            "requires_more",
-            "Sub_AddSpeedrunTime10",
-            "CompleteSpeedrun"
+            "点击确认速通按钮"
         ]
     },
     "Sub_AddSpeedrunTime2": {
@@ -79,7 +43,6 @@
             0
         ],
         "next": [
-            "Speedrun2x"
         ]
     },
     "Sub_AddSpeedrunTime4": {
@@ -94,7 +57,7 @@
             0
         ],
         "next": [
-            "Speedrun4x"
+
         ]
     },
     "Sub_AddSpeedrunTime10": {
@@ -109,7 +72,6 @@
             0
         ],
         "next": [
-            "Speedrun10x"
         ]
     },
     "AddSpeedrunTime2": {
@@ -122,7 +84,7 @@
             34
         ],
         "next": [
-            "CompleteSpeedrun"
+            "点击确认速通按钮"
         ]
     },
     "AddSpeedrunTime4": {
@@ -135,7 +97,7 @@
             32
         ],
         "next": [
-            "CompleteSpeedrun"
+            "点击确认速通按钮"
         ]
     },
     "AddSpeedrunTime10": {
@@ -148,17 +110,17 @@
             33
         ],
         "next": [
-            "CompleteSpeedrun"
+            "点击确认速通按钮"
         ]
     },
     "requires_more": {
         "recognition": "OCR",
         "expected": "需要更多体力",
         "next": [
-            "CompleteSpeedrun"
+            "点击确认速通按钮"
         ]
     },
-    "CompleteSpeedrun": {
+    "点击确认速通按钮": {
         "recognition": "TemplateMatch",
         "template": "Speedrun/12.png",
         "action": "Click",
@@ -185,7 +147,7 @@
         ],
         "next": [
             "settlement",
-            "CompleteSpeedrun",
+            "点击确认速通按钮",
             "Start1"
         ]
     },
@@ -201,21 +163,21 @@
             0
         ],
         "next": [
-            "exit"
+            "返回上一菜单"
         ]
     },
-    "exit": {
+    "返回上一菜单": {
         "recognition": "TemplateMatch",
-        "template": "Collect/06.png",
+        "template": "Collect/返回按钮.png",
         "action": "Click",
         "pre_wait_freezes": 1000,
         "next": [
-            "home"
+            "返回主界面"
         ]
     },
-    "home": {
+    "返回主界面": {
         "recognition": "TemplateMatch",
-        "template": "Startup/10.png",
+        "template": "Startup/返回主界面.png",
         "action": "Click",
         "pre_wait_freezes": 1000,
         "next": [
@@ -295,7 +257,7 @@
         "expected": "确定",
         "action": "Click",
         "next": [
-            "exit"
+            "返回上一菜单"
         ]
     }
 }

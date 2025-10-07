@@ -269,7 +269,7 @@
     },
     "tea_home": {
         "recognition": "TemplateMatch",
-        "template": "Startup/10.png",
+        "template": "Startup/返回主界面.png",
         "action": "Click",
         "post_delay": 5000,
         "next": [

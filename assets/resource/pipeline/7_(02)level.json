@@ -1,6 +1,8 @@
 {
-    "xuanze": {},
-    "SelectStage01": {
+    "选择关卡": {
+        "next": "选择关卡_辰"  //暂时设置为直接选择最后一关
+    },
+    "选择关卡_子": {
         "recognition": "OCR",
         "expected": "子",
         "action": "Click",
@@ -11,10 +13,10 @@
             0
         ],
         "next": [
-            "fast"
+            "进行速通"
         ]
     },
-    "SelectStage02": {
+    "选择关卡_丑": {
         "recognition": "OCR",
         "expected": "丑",
         "action": "Click",
@@ -25,10 +27,10 @@
             0
         ],
         "next": [
-            "fast"
+            "进行速通"
         ]
     },
-    "SelectStage03": {
+    "选择关卡_寅": {
         "recognition": "OCR",
         "expected": "寅",
         "action": "Click",
@@ -39,10 +41,10 @@
             0
         ],
         "next": [
-            "fast"
+            "进行速通"
         ]
     },
-    "SelectStage04": {
+    "选择关卡_卯": {
         "recognition": "OCR",
         "expected": "卯",
         "action": "Click",
@@ -53,10 +55,10 @@
             0
         ],
         "next": [
-            "fast"
+            "进行速通"
         ]
     },
-    "SelectStage05": {
+    "选择关卡_辰": {
         "recognition": "OCR",
         "expected": "辰",
         "action": "Click",
@@ -66,8 +68,9 @@
             0,
             0
         ],
+        "post_delay": 1000,
         "next": [
-            "fast"
+            "进行速通"
         ]
     }
 }

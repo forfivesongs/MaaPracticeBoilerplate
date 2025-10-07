@@ -1,29 +1,23 @@
 {
-    "kaishi": {
+    "日常的演训": {
         "next": [
-            "EnterTraining",
-            "StartTraining"
+            "从主界面进入演训",
+            "进入开始训练"
         ]
     },
-    "EnterTraining": {
+    "从主界面进入演训": {
         "recognition": "TemplateMatch",
         "template": "Mainpage/training.png",
         "action": "Click",
         "post_delay": 3000,
         "next": [
-            "StartTraining"
+            "进入开始训练"
         ]
     },
-    "StartTraining": {
-        "recognition": "OCR",
-        "expected": "试炼场",
+    "进入开始训练": {
+        "recognition": "TemplateMatch",
+        "template": "Training/开始训练.png",
         "action": "Click",
-        "target": [
-            260,
-            295,
-            0,
-            0
-        ],
         "post_delay": 2000,
         "next": [
             "Cash",
@@ -41,7 +35,7 @@
         "expected": "冬谷币",
         "action": "Click",
         "next": [
-            "xuanze"
+            "选择关卡"
         ]
     },
     "Experience": {
@@ -49,7 +43,7 @@
         "expected": "教材",
         "action": "Click",
         "next": [
-            "xuanze"
+            "选择关卡"
         ]
     },
     "Weapon": {
@@ -57,7 +51,7 @@
         "expected": "装备",
         "action": "Click",
         "next": [
-            "xuanze"
+            "选择关卡"
         ]
     },
     "Defender": {
@@ -73,7 +67,7 @@
         "expected": "宿卫",
         "action": "Click",
         "next": [
-            "xuanze"
+            "选择关卡"
         ]
     },
     "Caster": {
@@ -89,7 +83,7 @@
         "expected": "构术",
         "action": "Click",
         "next": [
-            "xuanze"
+            "选择关卡"
         ]
     },
     "Ranger": {
@@ -105,7 +99,7 @@
         "expected": "远击",
         "action": "Click",
         "next": [
-            "xuanze"
+            "选择关卡"
         ]
     },
     "LightMelee": {
@@ -121,7 +115,7 @@
         "expected": "轻锐",
         "action": "Click",
         "next": [
-            "xuanze"
+            "选择关卡"
         ]
     },
     "Tactical": {
@@ -137,7 +131,7 @@
         "expected": "战略",
         "action": "Click",
         "next": [
-            "xuanze"
+            "选择关卡"
         ]
     }
 }

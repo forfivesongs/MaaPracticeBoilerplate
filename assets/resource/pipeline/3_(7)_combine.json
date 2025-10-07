@@ -151,13 +151,13 @@
             0
         ],
         "next": [
-            "combine-home",
+            "combine-返回主界面",
             "combine-challenge"
         ]
     },
-    "combine-home": {
+    "combine-返回主界面": {
         "recognition": "TemplateMatch",
-        "template": "Startup/10.png",
+        "template": "Startup/返回主界面.png",
         "action": "Click"
     }
 }

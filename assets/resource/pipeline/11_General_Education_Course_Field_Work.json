@@ -1,0 +1,9 @@
+{
+    "结算通识外勤": {
+        "recognition": "TemplateMatch",
+        "template": "Training/通识课程外勤.png",
+        "action": "Click",
+        "next": [
+        ]
+    }
+}

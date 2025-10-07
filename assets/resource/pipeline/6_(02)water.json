@@ -7,7 +7,7 @@
             "max_water",
             "Swipe_drink",
             "drink",
-            "drink_a_2day_water"
+            "喝2天保质期的冬谷水"
         ]
     },
     "huipo": {
@@ -73,7 +73,7 @@
         "action": "Click",
         "post_delay": 3000,
         "next": [
-            "drink_a_2day_water",
+            "喝2天保质期的冬谷水",
             "quit_fork"
         ]
     },

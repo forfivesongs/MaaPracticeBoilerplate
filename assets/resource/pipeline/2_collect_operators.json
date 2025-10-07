@@ -277,7 +277,7 @@
     },
     "Quit": {
         "recognition": "TemplateMatch",
-        "template": "Collect/06.png",
+        "template": "Collect/返回按钮.png",
         "action": "Click"
     }
 }

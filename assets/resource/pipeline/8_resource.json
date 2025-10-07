@@ -493,7 +493,7 @@
         "expected": "壹",
         "action": "Click",
         "next": [
-            "fast"
+            "进行速通"
         ]
     },
     "ancient_both_sea_cantonese_often2": {
@@ -501,7 +501,7 @@
         "expected": "贰",
         "action": "Click",
         "next": [
-            "fast"
+            "进行速通"
         ]
     },
     "ancient_both_sea_cantonese_often3": {
@@ -509,7 +509,7 @@
         "expected": "叁",
         "action": "Click",
         "next": [
-            "fast"
+            "进行速通"
         ]
     },
     "ancient_both_sea_cantonese_often4": {
@@ -517,7 +517,7 @@
         "expected": "肆",
         "action": "Click",
         "next": [
-            "fast"
+            "进行速通"
         ]
     },
     "ancient_both_sea_cantonese_often5": {
@@ -525,7 +525,7 @@
         "expected": "伍",
         "action": "Click",
         "next": [
-            "fast"
+            "进行速通"
         ]
     }
 }

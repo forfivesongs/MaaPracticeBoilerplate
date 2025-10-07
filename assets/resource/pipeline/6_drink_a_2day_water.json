@@ -1,5 +1,5 @@
 {
-    "drink_a_2day_water": {
+    "喝2天保质期的冬谷水": {
         "recognition": "TemplateMatch",
         "template": "Mainpage/stamina.png",
         "roi": [

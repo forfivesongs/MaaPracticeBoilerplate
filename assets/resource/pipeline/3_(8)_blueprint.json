@@ -59,7 +59,7 @@
         ],
         "next": [
             "blueprint-get",
-            "combine-home"
+            "combine-返回主界面"
         ]
     },
     "blueprint-get": {
@@ -68,7 +68,7 @@
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "combine-home"
+            "combine-返回主界面"
         ]
     }
 }

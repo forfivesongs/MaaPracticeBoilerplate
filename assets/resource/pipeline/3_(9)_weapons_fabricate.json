@@ -159,7 +159,7 @@
             200
         ],
         "next": [
-            "weapons-fabricate-home"
+            "weapons-fabricate-返回主界面"
         ]
     },
     "weapons-fabricate-lack": {
@@ -177,7 +177,7 @@
         "action": "DoNothing",
         "post_delay": 2000,
         "next": [
-            "weapons-fabricate-home"
+            "weapons-fabricate-返回主界面"
         ]
     },
     "weapons-fabricate-full": {
@@ -186,12 +186,12 @@
         "action": "DoNothing",
         "post_delay": 2000,
         "next": [
-            "weapons-fabricate-home"
+            "weapons-fabricate-返回主界面"
         ]
     },
-    "weapons-fabricate-home": {
+    "weapons-fabricate-返回主界面": {
         "recognition": "TemplateMatch",
-        "template": "Startup/10.png",
+        "template": "Startup/返回主界面.png",
         "action": "Click"
     }
 }
