@@ -1,0 +1,282 @@
+{
+    "博物研学.开始博物研学.选择筛选": {
+        "pre_wait_freezes": 600,
+        //停顿较长时间
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1204,
+                    12,
+                    37,
+                    36
+                ]
+            }
+        },
+        "next": "博物研学.开始博物研学.选择构术"
+    },
+    "博物研学.开始博物研学.选择构术": {
+        "pre_wait_freezes": 200,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    815,
+                    220,
+                    49,
+                    27
+                ]
+            }
+        },
+        "next": "博物研学.开始博物研学.确定_1"
+    },
+    "博物研学.开始博物研学.确定_1": {
+        "pre_wait_freezes": 200,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    791,
+                    528,
+                    110,
+                    42
+                ]
+            }
+        },
+        "post_wait_freezes": 200,
+        "next": "博物研学.开始博物研学.选择初始角色加入编队"
+    },
+    "博物研学.开始博物研学.选择王氏书翰卷": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "Artifacter/王氏书翰卷.png",
+                "roi": [
+                    474,
+                    55,
+                    725,
+                    611
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": "博物研学.开始博物研学.选择初始角色加入编队"
+    },
+    "博物研学.开始博物研学.选择星月夜": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "Artifacter/星月夜.png",
+                "roi": [
+                    474,
+                    55,
+                    725,
+                    611
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": "博物研学.开始博物研学.选择初始角色加入编队"
+    },
+    "博物研学.开始博物研学.选择向日葵": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "Artifacter/向日葵.png",
+                "roi": [
+                    474,
+                    55,
+                    725,
+                    611
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": "博物研学.开始博物研学.选择初始角色加入编队"
+    },
+    "博物研学.开始博物研学.选择青铜仙鹤": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "Artifacter/青铜仙鹤.png",
+                "roi": [
+                    474,
+                    55,
+                    725,
+                    611
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": "博物研学.开始博物研学.选择初始角色加入编队"
+    },
+    "博物研学.开始博物研学.选择铜车马": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "Artifacter/铜车马.png",
+                "roi": [
+                    474,
+                    55,
+                    725,
+                    611
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": "博物研学.开始博物研学.选择初始角色加入编队"
+    },
+    "博物研学.开始博物研学.选择铜壶滴漏": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "Artifacter/铜壶滴漏.png",
+                "roi": [
+                    474,
+                    55,
+                    725,
+                    611
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": "博物研学.开始博物研学.选择初始角色加入编队"
+    },
+    "博物研学.开始博物研学.选择莫高窟记": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "Artifacter/莫高窟记.png",
+                "roi": [
+                    474,
+                    55,
+                    725,
+                    611
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": "博物研学.开始博物研学.选择初始角色加入编队"
+    },
+    "博物研学.开始博物研学.选择断臂维纳斯": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "Artifacter/断臂维纳斯.png",
+                "roi": [
+                    474,
+                    55,
+                    725,
+                    611
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": "博物研学.开始博物研学.选择初始角色加入编队"
+    },
+    "博物研学.开始博物研学.选择秦公镈": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "Artifacter/秦公镈.png",
+                "roi": [
+                    474,
+                    55,
+                    725,
+                    611
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": "博物研学.开始博物研学.选择初始角色加入编队"
+    },
+    "博物研学.开始博物研学.选择酒帐": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "Artifacter/酒帐.png",
+                "roi": [
+                    474,
+                    55,
+                    725,
+                    611
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": "博物研学.开始博物研学.选择初始角色加入编队"
+    },
+    "博物研学.局内1.选择酒帐": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "Artifacter/酒帐.png",
+                "roi": [
+                    474,
+                    55,
+                    725,
+                    611
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        }
+    },
+    "博物研学.局内1.选择睡莲": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "Artifacter/睡莲.png",
+                "roi": [
+                    474,
+                    55,
+                    725,
+                    611
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": "博物研学.局内.第五步编队打钩"
+    },
+    "博物研学.局内2.选择铜车马": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "Artifacter/铜车马.png",
+                "roi": [
+                    474,
+                    55,
+                    725,
+                    611
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": "博物研学.局内.第七步编队打钩"
+    }
+}

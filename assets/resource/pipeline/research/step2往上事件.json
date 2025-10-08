@@ -1,0 +1,47 @@
+{
+    "博物研学.局内.第二步往上走": {
+        "pre_wait_freezes": 1000,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [821,258,40,41]
+            }
+        },
+        "next": "博物研学.局内.第二步事件确认"
+    },
+    "博物研学.局内.第二步事件确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "休息",
+                "roi" : [986,489,116,53]
+            }
+        },
+        "action": {
+            "type":"Click"
+        },
+        "next": "博物研学.局内.第二步奇策确认按钮出现"
+    },
+    "博物研学.局内.第二步奇策确认按钮出现": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "确认",
+                "roi" : [849,620,89,40]
+            }
+        },
+        "next": "博物研学.局内.第二步奇策点击确认"
+    },
+    "博物研学.局内.第二步奇策点击确认": {
+        "inverse": true,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "确认",
+                "roi" : [849,620,89,40]
+            }
+        },
+        "next": "博物研学.局内.第三步往上走",
+        "interrupt": "确认获得奇策"
+    }
+}

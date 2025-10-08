@@ -1,0 +1,53 @@
+{
+    "博物研学.局内.第一步往上走": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "Research/Position/起始点图标.png",
+                "roi" : [230,336,192,162]
+            }
+        },
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [554,267,49,52]
+            }
+        },
+        "next": "博物研学.局内.第一步事件确认"
+    },
+    "博物研学.局内.第一步事件确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "休息",
+                "roi" : [986,489,116,53]
+            }
+        },
+        "action": {
+            "type":"Click"
+        },
+        "next": "博物研学.局内.第一步奇策确认按钮出现"
+    },
+    "博物研学.局内.第一步奇策确认按钮出现": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "确认",
+                "roi" : [849,620,89,40]
+            }
+        },
+        "next": "博物研学.局内.第一步奇策点击确认"
+    },
+    "博物研学.局内.第一步奇策点击确认": {
+        "inverse": true,    //如果仍然有确认按钮出现，就点击确认按钮直到没有确认按钮为止
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "确认",
+                "roi" : [849,620,89,40]
+            }
+        },
+        "next": "博物研学.局内.第二步往上走",
+        "interrupt": "确认获得奇策"
+    }
+}

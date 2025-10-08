@@ -1,0 +1,60 @@
+{
+    "博物研学.局内.第四步向右滑动一段": {
+        "pre_wait_freezes": 1000,
+        "action": {
+            "type":"Swipe",
+            "param": {
+                "begin": [1080,360,0,0],
+                "end": [100,360,0,0],
+                "duration": 700,
+                "end_hold": 1500
+            }
+        },
+        "next": "博物研学.局内.第四步往中走"
+    },
+    "博物研学.局内.第四步往中走": {
+        "pre_wait_freezes": 400,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target" : [279,391,55,56]
+            }
+        },
+        "next": "博物研学.局内.第四步事件确认"
+    },
+    "博物研学.局内.第四步事件确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "休息",
+                "roi" : [986,489,116,53]
+            }
+        },
+        "action": {
+            "type":"Click"
+        },
+        "next": "博物研学.局内.第四步奇策确认按钮出现"
+    },
+    "博物研学.局内.第四步奇策确认按钮出现": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "确认",
+                "roi" : [849,620,89,40]
+            }
+        },
+        "next": "博物研学.局内.第四步奇策点击确认"
+    },
+    "博物研学.局内.第四步奇策点击确认": {
+        "inverse": true,    //如果确认按钮还在，那么不往下
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "确认",
+                "roi" : [849,620,89,40]
+            }
+        },
+        "next": "博物研学.局内.第五步往上走",
+        "interrupt": "确认获得奇策"
+    }
+}

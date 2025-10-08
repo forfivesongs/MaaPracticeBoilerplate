@@ -1,0 +1,68 @@
+{
+    "博物研学.局内.第五步往上走": {
+        "action": {
+            "type":"Click",
+            "param": {
+                "target" : [534,324,46,48]
+            }
+        },
+        "next": "博物研学.局内.第五步导入确认"
+    },
+    "博物研学.局内.第五步导入确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "确认",
+                "roi" : [986,489,116,53]
+            }
+        },
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [1005,499,77,30]
+            }
+        },
+        "next": "博物研学.局内.第五步点击空槽"
+    },
+    "博物研学.局内.第五步点击空槽": {
+        "pre_wait_freezes": 200,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [769,253,113,124]
+            }
+        },
+        "next": "博物研学.局内1.选择睡莲",
+        "interrupt": "博物研学.选择器者时向右滑动翻页"
+    },
+    "博物研学.局内.第五步编队打钩": {
+        "recognition": {
+            "type":"OCR",
+            "param":{
+                "expected": "睡莲",
+                "roi" : [75,251,62,41],
+                "replace": ["睡连","睡莲"]
+            }
+        },
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [1143,671,92,34]
+            }
+        },
+        "next": "博物研学.局内.第五步点击确认"
+    },
+    "博物研学.局内.第五步点击确认": {
+        "recognition": {
+            "type":"OCR",
+            "param":{
+                "expected": "确认",
+                "roi" : [982,542,92,41]
+            }
+        },
+        "action": {
+            "type":"Click"
+        },
+        "next": "博物研学.局内.第六步往中走"
+    }
+}

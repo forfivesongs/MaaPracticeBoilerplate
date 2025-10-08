@@ -1,0 +1,170 @@
+{
+    "博物研学.局内.第八步往上走": {
+        "pre_wait_freezes": 1000,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [1205,322,41,50]
+            }
+        },
+        "next": "博物研学.局内.第八步战斗确认"
+    },
+    "博物研学.局内.第八步战斗确认": {
+        "pre_wait_freezes": 400,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [1007,491,75,45]
+            }
+        },
+        "next": "博物研学.局内.第八步编队界面点击开始"
+    },
+    "博物研学.局内.第八步编队界面点击开始": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "开始",
+                "roi" : [1092,641,49,24]
+            }
+        },
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [1066,634,90,35]
+            }
+        },
+        "next": "博物研学.局内.第八步等待进入加载界面"
+    },
+    "博物研学.局内.第八步等待进入加载界面": {
+        "inverse": true,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "开始",
+                "roi" : [1092,641,49,24]
+            }
+        },
+        "timeout": 300000,   //最多等待300秒
+        "rate_limit": 2000, //每隔2秒检测1次
+        "next": "博物研学.局内.第八步等待加载完毕"
+    },
+    "博物研学.局内.第八步等待加载完毕": {
+        "inverse": true,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "%",
+                "roi" : [1228,640,19,25]
+            }
+        },
+        "next": "博物研学.局内.第八步开启自动战斗"
+    },
+    "博物研学.局内.第八步开启自动战斗": {
+        "recognition": {
+            "type":"TemplateMatch",
+            "param":{
+                "template": "Combat/MaskedAutoFightEnabled.png",
+                "roi" : [1184,113,95,96],
+                "green_mask": true,
+                "threshold": 0.9}  //调高阈值防止误把开启识别为关闭
+        },
+        "next": "博物研学.局内.第八步点击开始战斗",    //如果打开就继续，否则先打开再继续
+        "interrupt": "打开自动战斗"
+    },
+    "博物研学.局内.第八步点击开始战斗": {
+        "pre_wait_freezes": 500,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [1067,655,185,49]
+            }
+        },
+        "timeout": 600000,           //一局战斗最多600秒？
+        "rate_limit": 5000,         //每隔5秒检测1次是否战斗结束
+        "next": "博物研学.局内.第八步战斗结算点击确认"
+    },
+    "博物研学.局内.第八步战斗结算点击确认": {
+        "recognition": {
+            "type":"OCR",
+            "param":{
+                "expected": "确定",
+                "roi" : [934,631,81,46]
+            }
+        },
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [934,631,81,46]
+            }
+        },
+        "rate_limit": 5000,   //每隔5秒检测1次是否回到了地图
+        "next": [
+          "博物研学.局内.第八步战斗结算等待弹出结算界面"
+        ]
+    },
+    "博物研学.局内.第八步战斗结算等待弹出结算界面": {
+        "recognition": {
+            "type":"OCR",
+            "param":{
+                "expected": "选择一个奇策",
+                "roi" : [505,13,251,66]
+            }
+        },
+        "next": [
+          "博物研学.局内.第八步战斗后选择破军奇策",
+          "博物研学.局内.第八步战斗后选择随机奇策"
+        ]
+    },
+    "博物研学.局内.第八步战斗后选择破军奇策": {
+        "pre_wait_freezes": 1000,
+        "recognition": {
+            "type":"TemplateMatch",
+            "param":{
+                "template": "Research/Buff/破军奇策图标.png",
+                "roi" : [264,173,754,142]
+            }
+        },
+        "action": {
+            "type":"Click"
+        },
+        "next": "博物研学.局内.第八步确认奇策"
+    },
+    "博物研学.局内.第八步战斗后选择随机奇策": {
+        "action": {
+            "type":"Click",
+            "param": {
+              "target": [277,187,116,118]
+            }
+        },
+        "next": "博物研学.局内.第八步确认奇策"
+    },
+    "博物研学.局内.第八步确认奇策": {
+        "action": {
+            "type":"Click",
+            "param": {
+              "target": [850,621,84,39]
+            }
+        },
+        "next": "博物研学.局内.第八步再次确认"
+    },
+    "博物研学.局内.第八步再次确认": {
+        "action": {
+            "type":"Click",
+            "param": {
+              "target": [855,621,78,43]
+            }
+        },
+        "next": "博物研学.局内.第八步奇策点击确认"
+    },
+    "博物研学.局内.第八步奇策点击确认": {
+        "inverse": true,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "确认",
+                "roi" : [849,620,89,40]
+            }
+        }
+
+    }
+}

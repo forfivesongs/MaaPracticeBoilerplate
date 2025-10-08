@@ -1,0 +1,232 @@
+{
+    "博物研学.局内.第六步往中走": {
+        "pre_wait_freezes": 1000,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [733,405,43,43]
+            }
+        },
+        "next": "博物研学.局内.第六步战斗确认"
+    },
+    "博物研学.局内.第六步战斗确认": {
+        "pre_wait_freezes": 400,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [1007,491,75,45]
+            }
+        },
+        "next": "博物研学.局内.第六步编队界面点击开始"
+    },
+    "博物研学.局内.第六步编队界面点击开始": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "开始",
+                "roi" : [1092,641,49,24]
+            }
+        },
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [1066,634,90,35]
+            }
+        },
+        "next": "博物研学.局内.第六步关闭小队空缺提示"
+    },
+    "博物研学.局内.第六步关闭小队空缺提示": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "开始战斗",
+                "roi" : [725,301,92,30]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [0,120,0,0]    //往下偏移点击勾号
+            }
+        },
+        "next": "博物研学.局内.第六步等待进入加载界面"
+    },
+    "博物研学.局内.第六步等待进入加载界面": {
+        "inverse": true,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "开始",
+                "roi" : [1092,641,49,24]
+            }
+        },
+        "timeout": 30000,   //最多等待300秒
+        "rate_limit": 2000, //每隔2秒检测1次
+        "next": "博物研学.局内.第六步等待加载完毕"
+    },
+    "博物研学.局内.第六步等待加载完毕": {
+        "inverse": true,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "%",
+                "roi" : [1228,640,19,25]
+            }
+        },
+        "next": "博物研学.局内.第六步开启自动战斗"
+    },
+    "博物研学.局内.第六步开启自动战斗": {
+        "recognition": {
+            "type":"TemplateMatch",
+            "param":{
+                "template": "Combat/MaskedAutoFightEnabled.png",
+                "roi" : [1184,113,95,96],
+                "green_mask": true,
+                "threshold": 0.9}  //调高阈值防止误把开启识别为关闭
+        },
+        "next": "博物研学.局内.第六步点击开始战斗",    //如果打开就继续，否则先打开再继续
+        "interrupt": "打开自动战斗"
+    },
+    "博物研学.局内.第六步点击开始战斗": {
+        "pre_wait_freezes": 500,
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [1067,655,185,49]
+            }
+        },
+        "timeout": 600000,           //一局战斗最多600秒？
+        "rate_limit": 5000,         //每隔5秒检测1次是否战斗结束
+        "next": "博物研学.局内.第六步战斗结算点击确认"
+    },
+    "博物研学.局内.第六步战斗结算点击确认": {
+        "recognition": {
+            "type":"OCR",
+            "param":{
+                "expected": "确定",
+                "roi" : [934,631,81,46]
+            }
+        },
+        "action": {
+            "type":"Click",
+            "param": {
+                "target": [934,631,81,46]
+            }
+        },
+        "rate_limit": 5000,   //每隔5秒检测1次是否回到了地图
+        "next": [
+          "博物研学.局内.第六步战斗结算等待弹出结算界面"
+        ]
+    },
+    "博物研学.局内.第六步战斗结算等待弹出结算界面": {
+        "recognition": {
+            "type":"OCR",
+            "param":{
+                "expected": "选择一个奇策",
+                "roi" : [505,13,251,66]
+            }
+        },
+        "next": [
+          "博物研学.局内.第六步战斗后选择破军奇策_1",
+          "博物研学.局内.第六步战斗后选择随机奇策_1"
+        ]
+    },
+    "博物研学.局内.第六步战斗后选择破军奇策_1": {
+        "pre_wait_freezes": 1000,
+        "recognition": {
+            "type":"TemplateMatch",
+            "param":{
+                "template": "Research/Buff/破军奇策图标.png",
+                "roi" : [264,173,754,142]
+            }
+        },
+        "action": {
+            "type":"Click"
+        },
+        "next": "博物研学.局内.第六步确认奇策_1"
+    },
+    "博物研学.局内.第六步战斗后选择随机奇策_1": {
+        "action": {
+            "type":"Click",
+            "param": {
+              "target": [277,187,116,118]
+            }
+        },
+        "next": "博物研学.局内.第六步确认奇策_1"
+    },
+    "博物研学.局内.第六步确认奇策_1": {
+        "action": {
+            "type":"Click",
+            "param": {
+              "target": [850,621,84,39]
+            }
+        },
+        "next": "博物研学.局内.第六步再次确认_1"
+    },
+    "博物研学.局内.第六步再次确认_1": {
+        "action": {
+            "type":"Click",
+            "param": {
+              "target": [855,621,78,43]
+            }
+        },
+        "next": [
+          "博物研学.局内.第六步战斗后选择破军奇策_2",
+          "博物研学.局内.第六步战斗后选择随机奇策_2"
+        ]
+    },
+    "博物研学.局内.第六步战斗后选择破军奇策_2": {
+        "pre_wait_freezes": 1000,
+        "recognition": {
+            "type":"TemplateMatch",
+            "param":{
+                "template": "Research/Buff/破军奇策图标.png",
+                "roi" : [264,173,754,142]
+            }
+        },
+        "action": {
+            "type":"Click"
+        },
+        "next": "博物研学.局内.第六步确认奇策_2"
+    },
+    "博物研学.局内.第六步战斗后选择随机奇策_2": {
+        "action": {
+            "type":"Click",
+            "param": {
+              "target": [277,187,116,118]
+            }
+        },
+        "next": "博物研学.局内.第六步确认奇策_2"
+    },
+    "博物研学.局内.第六步确认奇策_2": {
+        "action": {
+            "type":"Click",
+            "param": {
+              "target": [850,621,84,39]
+            }
+        },
+        "next": "博物研学.局内.第六步再次确认_2"
+    },
+    "博物研学.局内.第六步再次确认_2": {
+        "action": {
+            "type":"Click",
+            "param": {
+              "target": [855,621,78,43]
+            }
+        },
+        "next": [
+          "博物研学.局内.第六步奇策点击确认"
+        ]
+    },
+    "博物研学.局内.第六步奇策点击确认": {
+        "inverse": true,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": "确认",
+                "roi" : [849,620,89,40]
+            }
+        },
+
+    }
+}
